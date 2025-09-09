@@ -305,7 +305,7 @@ body {
 /* Services Section */
 .services {
     padding: 5rem 0;
-    background: white;
+    background: #f8f9fa;
 }
 
 .services-grid {
@@ -432,7 +432,7 @@ body {
     }
     
     .service-card {
-        min-height: 300px; /* Increased height */
+        min-height: 320px; /* Increased height */
         padding: 2.5rem 2rem; /* Increased padding */
     }
     
