@@ -181,14 +181,14 @@ h6 {
 
 .hero-title {
     font-size: 2.8rem;
-    font-weight: 600;
+    font-weight: 400;
     font-family: 'Inter', sans-serif;
     margin-bottom: 2rem;
     line-height: 1.2;
     letter-spacing: 0.15em;
     text-align: center;
     position: relative;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 .hero-title::after {
@@ -333,13 +333,13 @@ h6 {
 /* Section titles */
 .section-title {
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 400;
     font-family: 'Inter', sans-serif;
     text-align: center;
     margin-bottom: 3rem;
     color: #2d3748;
     letter-spacing: 0.1em;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 /* Services Section */
@@ -754,6 +754,8 @@ h6 {
     text-align: left;
     margin-bottom: 2rem;
     font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-transform: none;
 }
 
 .about-description {
@@ -805,10 +807,11 @@ h6 {
 
 .contact .section-title {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
     margin-bottom: 4rem;
     color: #2d3748;
+    text-transform: none;
 }
 
 .contact-grid {
@@ -1073,12 +1076,13 @@ h6 {
 
 .privacy-main-title {
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 400;
     font-family: 'Inter', sans-serif;
     font-family: 'Inter', sans-serif;
     color: #333;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
+    text-transform: none;
 }
 
 .privacy-intro {
@@ -1094,7 +1098,7 @@ h6 {
 
 .privacy-section-title {
     font-size: 1.8rem;
-    font-weight: 600;
+    font-weight: 400;
     font-family: 'Inter', sans-serif;
     font-family: 'Inter', sans-serif;
     color: #333;
@@ -1102,6 +1106,7 @@ h6 {
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #333;
     letter-spacing: 0.05em;
+    text-transform: none;
 }
 
 .privacy-section-content {
