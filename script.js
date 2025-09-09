@@ -95,7 +95,7 @@ function goToSlide(index) {
 if (slides.length > 0) {
     setInterval(() => {
         changeSlide(1);
-    }, 5000);
+    }, 8000);
 }
 
 // Keyboard navigation for slideshow
