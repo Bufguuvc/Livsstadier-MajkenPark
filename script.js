@@ -55,55 +55,64 @@ function scrollToContact() {
     }
 }
 
-// Testimonials Slideshow
-let currentSlide = 0;
-const slides = document.querySelectorAll('.testimonial-slide');
-const indicators = document.querySelectorAll('.indicator');
-
-function showSlide(index) {
-    // Hide all slides
-    slides.forEach(slide => slide.classList.remove('active'));
-    indicators.forEach(indicator => indicator.classList.remove('active'));
+// Testimonial Banner Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const testimonialBanner = document.getElementById('testimonialBanner');
+    const bannerContainer = document.querySelector('.testimonial-banner-container');
     
-    // Show current slide
-    if (slides[index]) {
-        slides[index].classList.add('active');
-    }
-    if (indicators[index]) {
-        indicators[index].classList.add('active');
-    }
-}
-
-function changeSlide(direction) {
-    currentSlide += direction;
-    
-    if (currentSlide >= slides.length) {
-        currentSlide = 0;
-    } else if (currentSlide < 0) {
-        currentSlide = slides.length - 1;
-    }
-    
-    showSlide(currentSlide);
-}
-
-function goToSlide(index) {
-    currentSlide = index;
-    showSlide(currentSlide);
-}
-
-// Auto-play slideshow
-if (slides.length > 0) {
-    setInterval(() => {
-        changeSlide(1);
-    }, 8000);
-}
-
-// Keyboard navigation for slideshow
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'ArrowLeft') {
-        changeSlide(-1);
-    } else if (e.key === 'ArrowRight') {
-        changeSlide(1);
+    if (testimonialBanner && bannerContainer) {
+        // Add keyboard accessibility
+        bannerContainer.setAttribute('tabindex', '0');
+        bannerContainer.setAttribute('role', 'region');
+        bannerContainer.setAttribute('aria-label', 'Customer testimonials - hover to pause scrolling');
+        
+        // Keyboard controls for accessibility
+        bannerContainer.addEventListener('keydown', function(e) {
+            if (e.key === 'Space' || e.key === 'Enter') {
+                e.preventDefault();
+                // Toggle animation pause
+                const currentState = testimonialBanner.style.animationPlayState;
+                testimonialBanner.style.animationPlayState = 
+                    currentState === 'paused' ? 'running' : 'paused';
+            }
+        });
+        
+        // Enhanced hover functionality with smooth transitions
+        let hoverTimeout;
+        
+        bannerContainer.addEventListener('mouseenter', function() {
+            clearTimeout(hoverTimeout);
+            testimonialBanner.style.animationPlayState = 'paused';
+        });
+        
+        bannerContainer.addEventListener('mouseleave', function() {
+            // Small delay before resuming to prevent flickering
+            hoverTimeout = setTimeout(() => {
+                testimonialBanner.style.animationPlayState = 'running';
+            }, 100);
+        });
+        
+        // Focus management for accessibility
+        bannerContainer.addEventListener('focus', function() {
+            testimonialBanner.style.animationPlayState = 'paused';
+        });
+        
+        bannerContainer.addEventListener('blur', function() {
+            testimonialBanner.style.animationPlayState = 'running';
+        });
+        
+        // Intersection Observer for performance optimization
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    testimonialBanner.style.animationPlayState = 'running';
+                } else {
+                    testimonialBanner.style.animationPlayState = 'paused';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        observer.observe(bannerContainer);
     }
 });
 
