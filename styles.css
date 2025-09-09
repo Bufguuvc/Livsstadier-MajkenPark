@@ -323,7 +323,7 @@ body {
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(143, 144, 142, 0.2); /* Updated shadow to complement gray */
     color: white; /* Updated text color for contrast on brown background */
-    text-align: center;
+    text-align: left;
     min-height: 320px; /* Slightly increased for better proportions */
 }
 
