@@ -329,18 +329,18 @@ body {
     }
     
     .service-card {
-        min-height: 400px;
-        padding: 3.5rem 3rem;
+        min-height: 500px; /* Increased for fullscreen */
+        padding: 4.5rem 3.5rem; /* Increased padding for fullscreen */
     }
     
     .service-card h3 {
-        font-size: 1.6rem;
-        margin-bottom: 2.5rem;
+        font-size: 1.8rem; /* Larger heading for fullscreen */
+        margin-bottom: 3.5rem; /* More spacing for fullscreen */
     }
     
     .service-card p {
-        font-size: 1.1rem;
-        line-height: 1.8;
+        font-size: 1.2rem; /* Larger text for fullscreen */
+        line-height: 2.0; /* More line spacing for fullscreen */
     }
     
     .services-cta-text {
