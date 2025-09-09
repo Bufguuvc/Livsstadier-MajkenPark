@@ -12,6 +12,35 @@ body {
     background-color: #f8f9fa;
 }
 
+/* Heading Typography - Consistent with body font */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+h4 {
+    font-weight: 500;
+}
+
+h5 {
+    font-weight: 500;
+}
+
+h6 {
+    font-weight: 500;
+}
+
 /* Navigation */
 .navbar {
     position: fixed;
@@ -152,7 +181,8 @@ body {
 
 .hero-title {
     font-size: 2.8rem;
-    font-weight: 400;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
     margin-bottom: 2rem;
     line-height: 1.2;
     letter-spacing: 0.15em;
@@ -303,7 +333,8 @@ body {
 /* Section titles */
 .section-title {
     font-size: 2.5rem;
-    font-weight: 400;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
     text-align: center;
     margin-bottom: 3rem;
     color: #2d3748;
@@ -347,6 +378,7 @@ body {
     color: white; /* Updated heading color for brown background */
     font-size: 1.5rem;
     font-weight: 600;
+    font-family: 'Inter', sans-serif;
     margin-bottom: 2rem; /* Increased spacing after heading */
     line-height: 1.3; /* Improved line height for headings */
     margin-top: 0; /* Reset top margin */
@@ -625,7 +657,8 @@ body {
 
 .author-info h4 {
     color: white;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
     margin-bottom: 0.25rem;
     font-size: 1rem;
 }
@@ -709,6 +742,7 @@ body {
 .about-text .section-title {
     text-align: left;
     margin-bottom: 2rem;
+    font-family: 'Inter', sans-serif;
 }
 
 .about-description {
@@ -721,6 +755,7 @@ body {
 .qualifications h3 {
     color: #2d3748;
     font-weight: 600;
+    font-family: 'Inter', sans-serif;
     margin-bottom: 1rem;
 }
 
@@ -1027,7 +1062,9 @@ body {
 
 .privacy-main-title {
     font-size: 2.5rem;
-    font-weight: 400;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #333;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
@@ -1046,7 +1083,9 @@ body {
 
 .privacy-section-title {
     font-size: 1.8rem;
-    font-weight: 400;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #333;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
