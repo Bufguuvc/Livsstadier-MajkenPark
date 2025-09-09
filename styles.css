@@ -284,6 +284,35 @@ body {
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+}
+
+.hero-image-fallback {
+    width: 400px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-image-fallback .fallback-content {
+    text-align: center;
+    color: white;
+}
+
+.hero-image-fallback .fallback-content svg {
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+.hero-image-fallback .fallback-content p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    opacity: 0.9;
 }
 
 /* Container */
@@ -1325,6 +1354,15 @@ body {
     .hero-image {
         width: 300px;
         height: 375px;
+    }
+    
+    .hero-image-fallback {
+        width: 300px;
+        height: 375px;
+    }
+    
+    .hero-image-fallback .fallback-content p {
+        font-size: 1rem;
     }
 
     .footer-copyright {
