@@ -305,7 +305,7 @@ body {
 /* Services Section */
 .services {
     padding: 5rem 0;
-    background: #f8f9fa;
+    background: white;
 }
 
 .services-grid {
@@ -318,13 +318,13 @@ body {
 
 .service-card {
     background: #4a5568; /* Professional blue-gray */
-    padding: 3rem 2.5rem; /* Increased padding for better spacing */
+    padding: 2.5rem 2rem; /* Original padding */
     border-radius: 15px;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(74, 85, 104, 0.2); /* Original blue shadow */
     color: white; /* Updated text color for contrast on brown background */
     text-align: center;
-    min-height: 350px; /* Increased height for better proportions */
+    min-height: 300px; /* Original height */
 }
 
 .service-card:hover {
@@ -338,46 +338,35 @@ body {
     color: white; /* Updated heading color for brown background */
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 2.5rem; /* Increased spacing after heading */
-    line-height: 1.4; /* Improved line height for better readability */
+    margin-bottom: 1.5rem; /* Original spacing */
+    line-height: 1.2; /* Original line height */
     margin-top: 0; /* Reset top margin */
-    letter-spacing: 0.5px; /* Added letter spacing for elegance */
 }
 
 .service-card p {
     color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for body text */
-    line-height: 1.8; /* Increased line spacing for better readability */
+    line-height: 1.6; /* Original line spacing */
     font-size: 1rem;
-    margin-bottom: 2rem; /* Increased spacing between paragraphs */
-    letter-spacing: 0.3px; /* Added subtle letter spacing */
-    max-width: 90%; /* Constrain text width for better readability */
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 1rem; /* Original spacing */
+    letter-spacing: normal; /* Original letter spacing */
 }
 
 /* Shared call-to-action section styling */
 .services-cta {
     text-align: center;
-    margin-top: 5rem; /* Increased top spacing for better separation */
+    margin-top: 3rem; /* Original spacing */
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    padding: 2.5rem 1.5rem; /* Increased padding for more breathing room */
-    background: white; /* Add white background for contrast */
-    border-radius: 20px; /* Rounded corners for modern look */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+    padding: 1rem; /* Original padding */
 }
 
 .services-cta-text {
     font-size: 1.1rem;
     color: #2d3748;
-    margin-bottom: 3rem; /* Increased spacing before button */
-    line-height: 1.8; /* Improved line height for readability */
+    margin-bottom: 2rem; /* Original spacing */
+    line-height: 1.6; /* Original line height */
     font-weight: normal; /* Original font weight */
-    letter-spacing: 0.3px; /* Added letter spacing */
-    max-width: 85%; /* Constrain text width */
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .services-cta-button {
@@ -432,22 +421,13 @@ body {
     }
     
     .service-card {
-        min-height: 320px; /* Increased height */
-        padding: 2.5rem 2rem; /* Increased padding */
-    }
-    
-    .service-card h3 {
-        margin-bottom: 2rem; /* Adjusted spacing */
-    }
-    
-    .service-card p {
-        margin-bottom: 1.5rem; /* Adjusted spacing */
+        min-height: 280px; /* Original height */
+        padding: 2rem 1.5rem; /* Original padding */
     }
     
     .services-cta-text {
         font-size: 1rem;
-        line-height: 1.7; /* Improved line height */
-        margin-bottom: 2.5rem; /* Adjusted spacing */
+        line-height: 1.5; /* Original line height */
     }
     
     .services-cta-button {
@@ -463,23 +443,19 @@ body {
     }
     
     .service-card {
-        min-height: 300px; /* Increased height */
-        padding: 2.5rem 2rem; /* Increased padding */
+        min-height: 260px; /* Original height */
+        padding: 2rem 1.5rem; /* Original padding */
     }
     
     .service-card h3 {
         font-size: 1.4rem;
-        margin-bottom: 2rem; /* Increased spacing */
-        line-height: 1.3; /* Improved line height */
-    }
-    
-    .service-card p {
-        margin-bottom: 1.5rem; /* Adjusted spacing */
+        margin-bottom: 1.5rem; /* Original spacing */
+        line-height: 1.2; /* Original line height */
     }
     
     .services-cta {
-        margin-top: 4rem; /* Increased spacing */
-        padding: 2rem 1.5rem; /* Increased padding */
+        margin-top: 2.5rem; /* Original spacing */
+        padding: 1rem;
     }
 }
 
@@ -491,31 +467,31 @@ body {
     }
     
     .service-card {
-        min-height: 300px; /* Further increased for better proportions */
-        padding: 2.5rem 2rem; /* Increased padding for mobile */
+        min-height: 260px; /* Increased for better proportions */
+        padding: 2rem 1.5rem; /* Maintained vertical padding */
     }
     
     .service-card h3 {
         font-size: 1.3rem;
-        margin-bottom: 2rem; /* Increased spacing */
+        margin-bottom: 1.5rem; /* Maintained good spacing */
         line-height: 1.3;
     }
     
     .service-card p {
         font-size: 0.95rem;
-        line-height: 1.8; /* Improved line height */
-        margin-bottom: 1.8rem; /* Increased spacing */
+        line-height: 1.7; /* Maintained good line height */
+        margin-bottom: 1.2rem;
     }
     
     .services-cta {
-        margin-top: 4rem; /* Increased spacing */
-        padding: 2rem 1rem; /* Increased padding */
+        margin-top: 2.5rem; /* Maintained good spacing */
+        padding: 1.5rem 0.5rem;
     }
     
     .services-cta-text {
         font-size: 0.95rem;
-        margin-bottom: 2.5rem; /* Increased spacing */
-        line-height: 1.7; /* Improved line height */
+        margin-bottom: 2rem; /* Maintained good spacing */
+        line-height: 1.6;
     }
     
     .services-cta-button {
