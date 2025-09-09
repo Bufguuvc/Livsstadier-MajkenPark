@@ -284,35 +284,6 @@ body {
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    transition: opacity 0.3s ease;
-}
-
-.hero-image-fallback {
-    width: 400px;
-    height: 500px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.hero-image-fallback .fallback-content {
-    text-align: center;
-    color: white;
-}
-
-.hero-image-fallback .fallback-content svg {
-    margin-bottom: 1rem;
-    opacity: 0.7;
-}
-
-.hero-image-fallback .fallback-content p {
-    font-size: 1.2rem;
-    font-weight: 500;
-    opacity: 0.9;
 }
 
 /* Container */
@@ -358,18 +329,18 @@ body {
     }
     
     .service-card {
-        min-height: 500px; /* Increased for fullscreen */
-        padding: 4.5rem 3.5rem; /* Increased padding for fullscreen */
+        min-height: 400px;
+        padding: 3.5rem 3rem;
     }
     
     .service-card h3 {
-        font-size: 1.8rem; /* Larger heading for fullscreen */
-        margin-bottom: 3.5rem; /* More spacing for fullscreen */
+        font-size: 1.6rem;
+        margin-bottom: 2.5rem;
     }
     
     .service-card p {
-        font-size: 1.2rem; /* Larger text for fullscreen */
-        line-height: 2.0; /* More line spacing for fullscreen */
+        font-size: 1.1rem;
+        line-height: 1.8;
     }
     
     .services-cta-text {
@@ -382,13 +353,13 @@ body {
 
 .service-card {
     background: #4a5568; /* Professional blue-gray */
-    padding: 4rem 3rem; /* Further increased padding for larger cards */
+    padding: 3rem 2.5rem; /* Increased padding for better spacing */
     border-radius: 15px;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(74, 85, 104, 0.2); /* Original blue shadow */
     color: white; /* Updated text color for contrast on brown background */
     text-align: center;
-    min-height: 450px; /* Significantly increased height for larger cards */
+    min-height: 350px; /* Increased height for better proportions */
 }
 
 .service-card:hover {
@@ -400,21 +371,21 @@ body {
 
 .service-card h3 {
     color: white; /* Updated heading color for brown background */
-    font-size: 1.7rem; /* Increased font size for larger cards */
+    font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 3rem; /* Increased spacing after heading */
-    line-height: 1.3; /* Optimized line height for multi-line headings */
+    margin-bottom: 2.5rem; /* Increased spacing after heading */
+    line-height: 1.4; /* Improved line height for better readability */
     margin-top: 0; /* Reset top margin */
     letter-spacing: 0.5px; /* Added letter spacing for elegance */
 }
 
 .service-card p {
     color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for body text */
-    line-height: 1.9; /* Further increased line spacing for larger cards */
-    font-size: 1.1rem; /* Increased font size for better readability */
-    margin-bottom: 2.5rem; /* Increased spacing between paragraphs */
+    line-height: 1.8; /* Increased line spacing for better readability */
+    font-size: 1rem;
+    margin-bottom: 2rem; /* Increased spacing between paragraphs */
     letter-spacing: 0.3px; /* Added subtle letter spacing */
-    max-width: 85%; /* Slightly constrain text width for better readability */
+    max-width: 90%; /* Constrain text width for better readability */
     margin-left: auto;
     margin-right: auto;
 }
@@ -439,28 +410,28 @@ body {
 
 /* Shared call-to-action button styling */
 .services-cta-button {
-    display: block;
-    background: #4a5568; /* Changed to blue to match website theme */
-    color: white; /* White text for contrast */
+    display: inline-block;
+    background: white;
+    color: #4a5568;
     border: 2px solid #4a5568;
-    padding: 1.2rem 2.5rem; /* Slightly increased padding */
-    border-radius: 12px; /* Increased border radius for modern look */
+    padding: 1rem 2rem;
+    border-radius: 8px;
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
     margin: 0 auto;
-    max-width: 320px; /* Slightly wider button */
+    display: block;
+    max-width: 300px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(74, 85, 104, 0.2); /* Added shadow for depth */
 }
 
 .services-cta-button:hover {
-    background: #2d3748; /* Darker blue on hover */
+    background: #4a5568;
     color: white;
-    transform: translateY(-3px); /* Slightly more lift on hover */
-    box-shadow: 0 8px 20px rgba(74, 85, 104, 0.3); /* Enhanced shadow on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 85, 104, 0.2);
 }
 
 
@@ -1354,15 +1325,6 @@ body {
     .hero-image {
         width: 300px;
         height: 375px;
-    }
-    
-    .hero-image-fallback {
-        width: 300px;
-        height: 375px;
-    }
-    
-    .hero-image-fallback .fallback-content p {
-        font-size: 1rem;
     }
 
     .footer-copyright {
