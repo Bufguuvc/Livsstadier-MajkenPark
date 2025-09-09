@@ -155,9 +155,10 @@ body {
     font-weight: 400;
     margin-bottom: 2rem;
     line-height: 1.2;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
     text-align: center;
     position: relative;
+    text-transform: uppercase;
 }
 
 .hero-title::after {
@@ -302,10 +303,12 @@ body {
 /* Section titles */
 .section-title {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 400;
     text-align: center;
     margin-bottom: 3rem;
     color: #2d3748;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 /* Services Section */
