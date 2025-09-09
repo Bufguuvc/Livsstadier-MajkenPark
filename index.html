@@ -1,226 +1,1357 @@
-<!DOCTYPE html>
-<html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livsstadier</title>
-    <meta name="description" content="Professionel coaching og konsultation til at finde indre ro, balance og en dybere forståelse af dig selv.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <img src="public/image.png" alt="Header Logo" class="nav-logo-image">
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#hjem" class="nav-link active">Forside</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#hvad-tilbyder-jeg" class="nav-link">Hvad tilbyder jeg?</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#om-mig" class="nav-link">Om mig</a>
-                </li>
-            </ul>
-            <div class="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- Hero Section -->
-    <section id="hjem" class="hero">
-        <div class="hero-background"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-layout">
-                <div class="hero-text">
-                    <h1 class="hero-title">MAJKEN PARK</h1>
-                    <div class="hero-social-container">
-                        <div class="hero-social-links">
-                            <a href="https://www.facebook.com/majken.p.pedersen/photos" target="_blank" rel="noopener noreferrer" class="hero-social-link facebook" aria-label="Følg os på Facebook">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span>Facebook</span>
-                            </a>
-                            <a href="https://www.instagram.com/majkenparklarsen/" target="_blank" rel="noopener noreferrer" class="hero-social-link instagram" aria-label="Følg os på Instagram">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
-                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
-                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                </svg>
-                                <span>Instagram</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-image-container">
-                    <img src="public/image copy.png" alt="Majken Park" class="hero-image">
-                </div>
-            </div>
-        </div>
-    </section>
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
 
-    <!-- Customer Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Kunde Udtalelser</h2>
-            <div class="slideshow-container">
-                <button class="slide-btn prev-btn" onclick="changeSlide(-1)">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                
-                <div class="testimonials-wrapper">
-                    <div class="testimonial-slide active">
-                        <div class="testimonial-card">
-                            <div class="quote-icon">"</div>
-                            <p class="testimonial-text">Gennem mit forløb med Livsstadier har jeg fundet en indre ro, jeg ikke vidste eksisterede. Processen har været transformerende og har givet mig redskaber til at navigere livets udfordringer.</p>
-                            <div class="testimonial-author">
-                                <div class="author-avatar">M</div>
-                                <div class="author-info">
-                                    <h4>Maria Andersen</h4>
-                                    <span>København</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="quote-icon">"</div>
-                            <p class="testimonial-text">Jeg var skeptisk i starten, men den individuelle tilgang og dybe forståelse har hjulpet mig med at bryde negative mønstre og skabe positive forandringer i mit liv.</p>
-                            <div class="testimonial-author">
-                                <div class="author-avatar">L</div>
-                                <div class="author-info">
-                                    <h4>Lars Nielsen</h4>
-                                    <span>Aarhus</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="quote-icon">"</div>
-                            <p class="testimonial-text">Den professionelle vejledning og støtte har været uvurderlig. Jeg har lært at forstå mig selv på en helt ny måde og har fundet styrke, jeg ikke vidste, jeg havde.</p>
-                            <div class="testimonial-author">
-                                <div class="author-avatar">A</div>
-                                <div class="author-info">
-                                    <h4>Anne Petersen</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="slide-indicators">
-                <span class="indicator active" onclick="goToSlide(0)"></span>
-                <span class="indicator" onclick="goToSlide(1)"></span>
-                <span class="indicator" onclick="goToSlide(2)"></span>
-            </div>
-        </div>
-    </section>
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 
-    <!-- Hvad tilbyder jeg Section -->
-    <section id="hvad-tilbyder-jeg" class="services">
-        <div class="container">
-            <h2 class="section-title">Hvad tilbyder jeg?</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Online spirituelt<br>3 mdr. forløb</h3>
-                    <p>12 gange hvor du lærer at mestre metoder og teknikker til at mærke dig selv, skabe ro og balance indvendig, lytte til din intuition og berolige dit nervesystem. Du lærer at tage clairvoyante beskeder ned til dig selv.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Online Mindset forløb<br>- 6 mdr.</h3>
-                    <p>Hver anden uge med undervisning/øvelser og sparringssamtaler i mindset. Et intenst transformerende forløb hvor du bliver guidet igennem hele processen.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Online mentorforløb<br>- 3 mdr.</h3>
-                    <p>6 gange hvor du kan vælge mellem spirituelt eller mindset coaching. Du bestemmer selv fra gang til gang hvad du ønsker coaching på.</p>
-                </div>
-            </div>
-            
-            <!-- Shared call-to-action elements -->
-            <p class="services-cta-text"><strong>Er du interesseret i at høre mere omkring dette, så book en gratis afklarende samtale med mig.</strong></p>
-            <button class="services-cta-button" onclick="scrollToContact()">Ja, jeg er nysgerrig</button>
-        </div>
-    </section>
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
 
-    <!-- About Me Section -->
-    <section id="om-mig" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="public/image copy copy.png" alt="Professionel coach" class="about-photo">
-                </div>
-                <div class="about-text">
-                    <h2 class="section-title">Om Mig</h2>
-                    <p class="about-description">
-                        Jeg har igennem mange år via mit arbejde som sagsbehandler haft flere 1000 samtaler med folk, som har både fysiske og psykiske diagnoser. Jeg blev færdig i 2019 med uddannelsen som kognitiv adfærdsterapeut. I marts 2025 blev jeg eksamineret som uddannet clairvoyant og er ligeledes påbegyndt healer uddannelsen. Det sidste, jeg har beskæftiget mig med, er mindset træning.
-                    </p>
-                    <p class="about-description">
-                        Jeg brænder for at hjælpe mennesker med at få et højere selvværd og viser dem vejen dertil igennem redskaber og coaching samtaler og kombinerer min viden og erfaring.
-                        Jeg hjælper andre, fordi jeg selv har haft et meget lavt selvværd og har nu opnået det modsatte og vil gerne hjælpe med, at DU kan få det ligeså godt, som jeg selv har fået.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #4a5568;
+}
 
-    <!-- Contact Section -->
+.logo-icon {
+    font-size: 1.5rem;
+}
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-main">
-                <div class="footer-logo-section">
-                    <div class="footer-social">
-                        <a href="https://www.instagram.com/majkenparklarsen/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.facebook.com/majken.p.pedersen/photos" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-copyright">
-                <p>&copy; Livsstadier. Alle rettigheder forbeholdes.</p>
-                <div class="footer-links">
-                    <a href="privatlivspolitik.html" class="privacy-link">Privatlivspolitik</a>
-                    <a href="handelsbetingelser.html" class="privacy-link">Handelsbetingelser</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.nav-link {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #2d3748;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #4a5568;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: #4a5568;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #867566;
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    color: white;
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    letter-spacing: 0.2em;
+    text-align: center;
+    position: relative;
+}
+
+.hero-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 2px;
+    background: white;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    max-width: 500px;
+    margin-left: 0;
+    margin-right: 0;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #4a5568;
+    color: white;
+    padding: 1.25rem 2.5rem;
+    border: none;
+    border-radius: 60px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(74, 85, 104, 0.3);
+    position: relative;
+    overflow: hidden;
+    margin-top: 3rem;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(74, 85, 104, 0.4);
+    background: #2d3748;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-arrow {
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.cta-button:hover .cta-arrow {
+    transform: translateX(8px) scale(1.1);
+}
+
+/* Hero Social Links */
+.hero-social-container {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.hero-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.hero-social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 140px;
+    justify-content: center;
+}
+
+.hero-social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-social-link.instagram:hover {
+    background: linear-gradient(45deg, #833AB4, #FD1D1D, #FCB045);
+    color: white;
+    border-color: transparent;
+}
+
+.hero-social-link.facebook:hover {
+    background: #1877F2;
+    color: white;
+    border-color: transparent;
+}
+
+/* Hero Image */
+.hero-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Section titles */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2d3748;
+}
+
+/* Services Section */
+.services {
+    padding: 5rem 0;
+    background: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Fullscreen optimization for offers */
+@media (min-width: 1400px) {
+    .services {
+        padding: 6rem 0;
+    }
+    
+    .services-grid {
+        max-width: 1200px;
+        gap: 3rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .service-card {
+        min-height: 400px;
+        padding: 3.5rem 3rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.6rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .service-card p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+    
+    .services-cta-text {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin-top: 6rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.service-card {
+    background: #4a5568; /* Professional blue-gray */
+    padding: 4rem 3rem; /* Further increased padding for larger cards */
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(74, 85, 104, 0.2); /* Original blue shadow */
+    color: white; /* Updated text color for contrast on brown background */
+    text-align: center;
+    min-height: 450px; /* Significantly increased height for larger cards */
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(74, 85, 104, 0.3); /* Original blue hover shadow */
+}
+
+/* Removed service-icon styles as icons are no longer used */
+
+.service-card h3 {
+    color: white; /* Updated heading color for brown background */
+    font-size: 1.7rem; /* Increased font size for larger cards */
+    font-weight: 600;
+    margin-bottom: 3rem; /* Increased spacing after heading */
+    line-height: 1.3; /* Optimized line height for multi-line headings */
+    margin-top: 0; /* Reset top margin */
+    letter-spacing: 0.5px; /* Added letter spacing for elegance */
+}
+
+.service-card p {
+    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for body text */
+    line-height: 1.9; /* Further increased line spacing for larger cards */
+    font-size: 1.1rem; /* Increased font size for better readability */
+    margin-bottom: 2.5rem; /* Increased spacing between paragraphs */
+    letter-spacing: 0.3px; /* Added subtle letter spacing */
+    max-width: 85%; /* Slightly constrain text width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Shared call-to-action text styling */
+.services-cta-text {
+    text-align: center;
+    margin-top: 5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem;
+    color: #2d3748;
+    margin-bottom: 3rem; /* Increased spacing before button */
+    line-height: 1.8; /* Improved line height for readability */
+    font-weight: normal; /* Original font weight */
+    letter-spacing: 0.3px; /* Added letter spacing */
+    max-width: 85%; /* Constrain text width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Shared call-to-action button styling */
+.services-cta-button {
+    display: block;
+    background: #4a5568; /* Changed to blue to match website theme */
+    color: white; /* White text for contrast */
+    border: 2px solid #4a5568;
+    padding: 1.2rem 2.5rem; /* Slightly increased padding */
+    border-radius: 12px; /* Increased border radius for modern look */
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin: 0 auto;
+    max-width: 320px; /* Slightly wider button */
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(74, 85, 104, 0.2); /* Added shadow for depth */
+}
+
+.services-cta-button:hover {
+    background: #2d3748; /* Darker blue on hover */
+    color: white;
+    transform: translateY(-3px); /* Slightly more lift on hover */
+    box-shadow: 0 8px 20px rgba(74, 85, 104, 0.3); /* Enhanced shadow on hover */
+}
+
+
+/* Legacy button styles - keeping for any remaining instances */
+.service-booking-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.service-booking-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced responsive design for service cards */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .service-card {
+        min-height: 300px; /* Increased height */
+        padding: 2.5rem 2rem; /* Increased padding */
+    }
+    
+    .service-card h3 {
+        margin-bottom: 2rem; /* Adjusted spacing */
+    }
+    
+    .service-card p {
+        margin-bottom: 1.5rem; /* Adjusted spacing */
+    }
+    
+    .services-cta-text {
+        font-size: 1rem;
+        line-height: 1.7; /* Improved line height */
+        margin-bottom: 2.5rem; /* Adjusted spacing */
+    }
+    
+    .services-cta-button {
+        padding: 0.9rem 1.8rem; /* Original proportions */
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .service-card {
+        min-height: 300px; /* Increased height */
+        padding: 2.5rem 2rem; /* Increased padding */
+    }
+    
+    .service-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 2rem; /* Increased spacing */
+        line-height: 1.3; /* Improved line height */
+    }
+    
+    .service-card p {
+        margin-bottom: 1.5rem; /* Adjusted spacing */
+    }
+    
+    .services-cta {
+        margin-top: 4rem; /* Increased spacing */
+        padding: 2rem 1.5rem; /* Increased padding */
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 500px;
+    }
+    
+    .service-card {
+        min-height: 300px; /* Further increased for better proportions */
+        padding: 2.5rem 2rem; /* Increased padding for mobile */
+    }
+    
+    .service-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 2rem; /* Increased spacing */
+        line-height: 1.3;
+    }
+    
+    .service-card p {
+        font-size: 0.95rem;
+        line-height: 1.8; /* Improved line height */
+        margin-bottom: 1.8rem; /* Increased spacing */
+    }
+    
+    .services-cta {
+        margin-top: 4rem; /* Increased spacing */
+        padding: 2rem 1rem; /* Increased padding */
+    }
+    
+    .services-cta-text {
+        font-size: 0.95rem;
+        margin-bottom: 2.5rem; /* Increased spacing */
+        line-height: 1.7; /* Improved line height */
+    }
+    
+    .services-cta-button {
+        padding: 1rem 2rem; /* Maintained good proportions */
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .service-card {
+        padding: 1.8rem 1.2rem; /* Maintained vertical padding */
+        min-height: 240px; /* Increased for better proportions */
+    }
+    
+    .service-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1.3rem;
+        line-height: 1.3;
+    }
+    
+    .service-card p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+    
+    .services-cta-text {
+        font-size: 0.9rem;
+        margin-bottom: 1.8rem; /* Maintained good spacing */
+        line-height: 1.5;
+    }
+    
+    .services-cta-button {
+        padding: 0.9rem 1.8rem; /* Maintained good proportions */
+        font-size: 0.9rem;
+    }
+}
+/* Testimonials */
+.testimonials {
+    padding: 5rem 0;
+    background: white;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.testimonials-wrapper {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.testimonial-slide {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.testimonial-slide.active {
+    display: block;
+}
+
+.testimonial-card {
+    background: #f8f9fa;
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.quote-icon {
+    font-size: 4rem;
+    color: #4a5568;
+    opacity: 0.3;
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #4a5568;
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    background: #4a5568;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.author-info h4 {
+    color: #2d3748;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.author-info span {
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+.slide-btn {
+    background: #4a5568;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.slide-btn:hover {
+    background: #2d3748;
+    transform: scale(1.1);
+}
+
+.slide-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #cbd5e0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.indicator.active {
+    background: #4a5568;
+}
+
+/* About Section */
+.about {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-photo {
+    width: 85%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-text .section-title {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 2rem;
+}
+
+.qualifications h3 {
+    color: #2d3748;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.qualifications ul {
+    list-style: none;
+}
+
+.qualifications li {
+    padding: 0.5rem 0;
+    color: #4a5568;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.qualifications li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4a5568;
+    font-weight: bold;
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 0 3rem;
+    background: white;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 3rem;
+}
+
+.contact-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.contact .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #2d3748;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    min-width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: #4a5568;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-bottom: 0.5rem;
+}
+
+.contact-details h3 {
+    color: #2d3748;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.contact-details p {
+    color: #4a5568;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.social-media-section {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.social-media-section h3 {
+    color: #2d3748;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: #f8f9fa;
+    color: #4a5568;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    min-width: 140px;
+    justify-content: center;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-link.instagram:hover {
+    background: linear-gradient(45deg, #833AB4, #FD1D1D, #FCB045);
+    color: white;
+}
+
+.social-link.facebook:hover {
+    background: #1877F2;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background: #867566;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-main {
+    margin-bottom: 2rem;
+}
+
+.footer-logo-section {
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo img {
+    height: 60px;
+    width: auto;
+}
+
+.footer-logo .logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.footer-tagline {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-social-link {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-social-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.footer-copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.footer-copyright p {
+    color: #ffffff;
+}
+
+.privacy-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.privacy-link:hover {
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Simple Privacy Policy Page Styles */
+.privacy-simple-content {
+    padding: 8rem 0 4rem;
+    background: white;
+    min-height: 100vh;
+}
+
+.privacy-simple-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.back-to-home {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4a5568;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    background: transparent;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+
+.back-button:hover {
+    color: #2d3748;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Enhanced back button styling to match website design */
+.back-button-enhanced {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #4a5568;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(74, 85, 104, 0.2);
+    margin-bottom: 2rem;
+}
+
+.back-button-enhanced:hover {
+    background: #2d3748;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 85, 104, 0.3);
+}
+
+.privacy-main-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.privacy-intro {
+    margin-bottom: 3rem;
+}
+
+.privacy-intro p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.privacy-section-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #333;
+}
+
+.privacy-section-content {
+    margin-bottom: 3rem;
+}
+
+.privacy-section-content p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.privacy-subsection-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 2rem 0 1rem 0;
+    text-decoration: underline;
+}
+
+.nav-logo-image {
+    height: 40px;
+    width: auto;
+}
+
+.footer-logo-image {
+    height: 60px;
+    width: auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+/* Privacy Policy Page Styles */
+.privacy-page {
+    background: #f8f9fa;
+}
+
+.privacy-hero {
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+    color: white;
+    padding: 8rem 0 4rem;
+    text-align: center;
+}
+
+.privacy-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.privacy-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: white;
+}
+
+.privacy-content {
+    padding: 5rem 0;
+    background: white;
+}
+
+.privacy-cards {
+    display: grid;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.privacy-card {
+    background: #f8f9fa;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.privacy-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.privacy-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.privacy-icon {
+    width: 50px;
+    height: 50px;
+    background: #4a5568;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.privacy-card h2 {
+    color: #2d3748;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.privacy-card p {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.privacy-card p:last-child {
+    margin-bottom: 0;
+}
+
+.privacy-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.privacy-card li {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.privacy-card li::before {
+    content: '•';
+    color: #4a5568;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.privacy-contact-cta {
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.privacy-contact-cta h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.privacy-contact-cta p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-wrapper {
+        /* No grid needed anymore */
+    }
+
+    .slideshow-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .slide-btn {
+        position: static;
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        width: 300px;
+        height: 375px;
+    }
+
+    .footer-copyright {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .privacy-hero {
+        padding: 6rem 0 3rem;
+    }
+
+    .privacy-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .privacy-cards {
+        gap: 1.5rem;
+    }
+
+    .privacy-card {
+        padding: 2rem;
+    }
+
+    .privacy-card-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
