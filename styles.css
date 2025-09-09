@@ -188,7 +188,7 @@ h6 {
     letter-spacing: 0.15em;
     text-align: center;
     position: relative;
-    text-transform: none;
+    text-transform: uppercase;
 }
 
 .hero-title::after {
