@@ -316,6 +316,41 @@ body {
     margin: 0 auto;
 }
 
+/* Fullscreen optimization for offers */
+@media (min-width: 1400px) {
+    .services {
+        padding: 6rem 0;
+    }
+    
+    .services-grid {
+        max-width: 1200px;
+        gap: 3rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .service-card {
+        min-height: 400px;
+        padding: 3.5rem 3rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.6rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .service-card p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+    
+    .services-cta-text {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin-top: 6rem;
+        margin-bottom: 3rem;
+    }
+}
+
 .service-card {
     background: #4a5568; /* Professional blue-gray */
     padding: 3rem 2.5rem; /* Increased padding for better spacing */
@@ -375,8 +410,28 @@ body {
 
 /* Shared call-to-action button styling */
 .services-cta-button {
-    display: block;
+    display: inline-block;
+    background: white;
+    color: #4a5568;
+    border: 2px solid #4a5568;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
     margin: 0 auto;
+    display: block;
+    max-width: 300px;
+    text-align: center;
+}
+
+.services-cta-button:hover {
+    background: #4a5568;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 85, 104, 0.2);
 }
 
 
