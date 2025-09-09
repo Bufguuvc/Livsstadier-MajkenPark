@@ -566,21 +566,21 @@ body {
 }
 
 .testimonial-item {
-    background: #8F908E;
+    background: #4a5568;
     padding: 2.5rem;
     border-radius: 15px;
     text-align: left;
     position: relative;
     min-width: 500px;
     max-width: 500px;
-    box-shadow: 0 5px 15px rgba(143, 144, 142, 0.2);
+    box-shadow: 0 5px 15px rgba(74, 85, 104, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(143, 144, 142, 0.1);
+    border: 1px solid rgba(74, 85, 104, 0.1);
 }
 
 .testimonial-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(143, 144, 142, 0.3);
+    box-shadow: 0 10px 25px rgba(74, 85, 104, 0.3);
 }
 
 .testimonial-stars {
