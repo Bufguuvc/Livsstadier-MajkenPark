@@ -353,27 +353,20 @@ body {
 
 /* Shared call-to-action section styling */
 .services-cta {
-    /* Modern flexbox centering for better control */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    margin-top: 5rem; /* Increased spacing between offers and CTA section */
+    margin-top: 4rem; /* Increased spacing above CTA section */
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    padding: 2.5rem 1rem; /* Enhanced padding for better visual separation */
-    gap: 2rem; /* Consistent spacing between text and button using flexbox gap */
+    padding: 2rem 1rem; /* Added padding for better spacing */
 }
 
 .services-cta-text {
     font-size: 1.1rem;
     color: #2d3748;
-    margin-bottom: 0; /* Remove margin since we're using flexbox gap */
+    margin-bottom: 2.5rem; /* Increased spacing before button */
     line-height: 1.7; /* Improved line height */
     font-weight: 500; /* Slightly bolder for emphasis */
-    text-align: center; /* Ensure text is centered */
 }
 
 .services-cta-button {
@@ -389,7 +382,6 @@ body {
     box-shadow: 0 4px 15px rgba(143, 144, 142, 0.3); /* Updated shadow */
     text-transform: none;
     letter-spacing: 0.8px; /* Increased letter spacing for elegance */
-    /* Button is automatically centered due to parent flexbox alignment */
 }
 
 .services-cta-button:hover {
@@ -433,12 +425,6 @@ body {
         padding: 2.5rem 2rem; /* Maintained vertical padding */
     }
     
-    .services-cta {
-        margin-top: 4rem; /* Slightly reduced spacing on smaller screens */
-        padding: 2rem 1rem;
-        gap: 1.5rem; /* Adjusted gap for smaller screens */
-    }
-    
     .services-cta-text {
         font-size: 1rem;
         line-height: 1.6; /* Maintained good line height on smaller screens */
@@ -468,9 +454,8 @@ body {
     }
     
     .services-cta {
-        margin-top: 3.5rem; /* Maintained good spacing */
+        margin-top: 3rem; /* Maintained good spacing */
         padding: 1.5rem 1rem;
-        gap: 1.5rem; /* Consistent gap on tablet screens */
     }
 }
 
@@ -499,13 +484,13 @@ body {
     }
     
     .services-cta {
-        margin-top: 3rem; /* Maintained good spacing */
+        margin-top: 2.5rem; /* Maintained good spacing */
         padding: 1.5rem 0.5rem;
-        gap: 1.5rem; /* Consistent gap on mobile screens */
     }
     
     .services-cta-text {
         font-size: 0.95rem;
+        margin-bottom: 2rem; /* Maintained good spacing */
         line-height: 1.6;
     }
     
@@ -535,6 +520,7 @@ body {
     
     .services-cta-text {
         font-size: 0.9rem;
+        margin-bottom: 1.8rem; /* Maintained good spacing */
         line-height: 1.5;
     }
     
