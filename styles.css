@@ -395,17 +395,17 @@ h6 {
 /* Shared call-to-action section styling */
 .services-cta {
     text-align: center;
-    margin-top: 4rem; /* Increased spacing above CTA section */
+    margin-top: 2rem; /* Reduced spacing to bring CTA closer to service cards */
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    padding: 2rem 1rem; /* Added padding for better spacing */
+    padding: 1rem 1rem; /* Reduced padding for tighter layout */
 }
 
 .services-cta-text {
     font-size: 1.1rem;
     color: #2d3748;
-    margin-bottom: 1.5rem; /* Reduced spacing before button */
+    margin-bottom: 1rem; /* Further reduced spacing for closer positioning */
     line-height: 1.7; /* Improved line height */
     font-weight: 500; /* Slightly bolder for emphasis */
 }
@@ -469,12 +469,17 @@ h6 {
     .services-cta-text {
         font-size: 1rem;
         line-height: 1.6; /* Maintained good line height on smaller screens */
-        margin-bottom: 1.2rem; /* Reduced spacing on smaller screens */
+        margin-bottom: 1rem; /* Further reduced for closer positioning */
     }
     
     .services-cta-button {
         padding: 1rem 2rem; /* Maintained good proportions */
         font-size: 1rem;
+    }
+    
+    .services-cta {
+        margin-top: 1.5rem; /* Reduced spacing on medium screens */
+        padding: 1rem 1rem;
     }
 }
 
@@ -496,7 +501,7 @@ h6 {
     }
     
     .services-cta {
-        margin-top: 3rem; /* Maintained good spacing */
+        margin-top: 1.5rem; /* Reduced spacing for closer positioning */
         padding: 1.5rem 1rem;
     }
 }
@@ -526,13 +531,13 @@ h6 {
     }
     
     .services-cta {
-        margin-top: 2.5rem; /* Maintained good spacing */
+        margin-top: 1.5rem; /* Reduced spacing for mobile */
         padding: 1.5rem 0.5rem;
     }
     
     .services-cta-text {
         font-size: 0.95rem;
-        margin-bottom: 1.2rem; /* Reduced spacing on mobile */
+        margin-bottom: 1rem; /* Further reduced for closer positioning */
         line-height: 1.6;
     }
     
@@ -562,13 +567,18 @@ h6 {
     
     .services-cta-text {
         font-size: 0.9rem;
-        margin-bottom: 1rem; /* Reduced spacing on small screens */
+        margin-bottom: 0.8rem; /* Further reduced for very small screens */
         line-height: 1.5;
     }
     
     .services-cta-button {
         padding: 0.9rem 1.8rem; /* Maintained good proportions */
         font-size: 0.9rem;
+    }
+    
+    .services-cta {
+        margin-top: 1.2rem; /* Minimal spacing on very small screens */
+        padding: 1rem 0.5rem;
     }
 }
 /* Testimonials */
