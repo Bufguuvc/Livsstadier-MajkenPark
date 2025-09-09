@@ -411,7 +411,7 @@ h6 {
 }
 
 .services-cta-button {
-    background: #8F908E; /* Match the card color */
+    background: #1c8a75;
     color: white;
     border: none;
     padding: 1.2rem 2.5rem; /* Increased padding for better proportions */
@@ -420,15 +420,15 @@ h6 {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(143, 144, 142, 0.3); /* Updated shadow */
+    box-shadow: 0 4px 15px rgba(28, 138, 117, 0.3);
     text-transform: none;
     letter-spacing: 0.8px; /* Increased letter spacing for elegance */
 }
 
 .services-cta-button:hover {
-    background: #7a7b79; /* Darker gray on hover */
+    background: #156b5c;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(143, 144, 142, 0.4); /* Updated hover shadow */
+    box-shadow: 0 6px 20px rgba(28, 138, 117, 0.4);
 }
 
 /* Legacy button styles - keeping for any remaining instances */
