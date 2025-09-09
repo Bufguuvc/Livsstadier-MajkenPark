@@ -616,7 +616,7 @@ body {
 }
 
 .slide-btn {
-    background: #4a5568;
+    background: #867566;
     color: white;
     border: none;
     width: 50px;
@@ -630,7 +630,7 @@ body {
 }
 
 .slide-btn:hover {
-    background: #2d3748;
+    background: #6b5d52;
     transform: scale(1.1);
 }
 
@@ -651,7 +651,7 @@ body {
 }
 
 .indicator.active {
-    background: #4a5568;
+    background: #867566;
 }
 
 /* About Section */
