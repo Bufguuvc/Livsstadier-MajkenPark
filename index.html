@@ -3,43 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livsstadier - Majken Park</title>
-    <meta name="description" content="Spirituel vejledning og personlig udvikling med Majken Park. Online forløb og mentoring til at finde balance og ro i dit liv.">
+    <title>Livsstadier</title>
+    <meta name="description" content="Professionel coaching og konsultation til at finde indre ro, balance og en dybere forståelse af dig selv.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Page Loader -->
-    <div class="page-loader">
-        <div class="loader-content">
-            <div class="loader-spinner"></div>
-            <p>Indlæser...</p>
-        </div>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="public/image.png" alt="Livsstadier Logo" class="nav-logo-image">
+                <img src="public/image.png" alt="Header Logo" class="nav-logo-image">
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#hjem" class="nav-link">Hjem</a>
+                    <a href="#hjem" class="nav-link active">Forside</a>
                 </li>
                 <li class="nav-item">
                     <a href="#hvad-tilbyder-jeg" class="nav-link">Hvad tilbyder jeg?</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#anmeldelser" class="nav-link">Anmeldelser</a>
-                </li>
-                <li class="nav-item">
                     <a href="#om-mig" class="nav-link">Om mig</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#kontakt" class="nav-link">Kontakt</a>
                 </li>
             </ul>
             <div class="nav-toggle">
@@ -57,94 +43,41 @@
         <div class="hero-content">
             <div class="hero-layout">
                 <div class="hero-text">
-                    <h1 class="hero-title">LIVSSTADIER</h1>
-                    <p class="hero-description">Find balance, ro og retning i dit liv gennem spirituel vejledning og personlig udvikling.</p>
-                    
+                    <h1 class="hero-title">MAJKEN PARK</h1>
                     <div class="hero-social-container">
                         <div class="hero-social-links">
-                            <a href="https://www.instagram.com/majkenparklarsen/" target="_blank" rel="noopener noreferrer" class="hero-social-link instagram">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <a href="https://www.facebook.com/majken.p.pedersen/photos" target="_blank" rel="noopener noreferrer" class="hero-social-link facebook" aria-label="Følg os på Facebook">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://www.instagram.com/majkenparklarsen/" target="_blank" rel="noopener noreferrer" class="hero-social-link instagram" aria-label="Følg os på Instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
                                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
                                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                                 </svg>
-                                Instagram
-                            </a>
-                            <a href="https://www.facebook.com/majken.p.pedersen/photos" target="_blank" rel="noopener noreferrer" class="hero-social-link facebook">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                Facebook
+                                <span>Instagram</span>
                             </a>
                         </div>
                     </div>
-                    
-                    <div class="hero-button-container">
-                        <a href="#kontakt" class="cta-button" onclick="scrollToContact()">
-                            <span>Kom i kontakt</span>
-                            <svg class="cta-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
                 </div>
-                
                 <div class="hero-image-container">
-                    <img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop" 
-                         alt="Majken Park - Spirituel vejleder" 
-                         class="hero-image"
-                         loading="lazy"
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="hero-image-fallback" style="display: none;">
-                        <div class="fallback-content">
-                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
-                                <line x1="9" y1="9" x2="9.01" y2="9"/>
-                                <line x1="15" y1="9" x2="15.01" y2="9"/>
-                            </svg>
-                            <p>Majken Park</p>
-                        </div>
-                    </div>
+                    <img src="public/image copy.png" alt="Majken Park" class="hero-image">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="hvad-tilbyder-jeg" class="services">
+    <!-- Customer Testimonials -->
+    <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">Hvad tilbyder jeg?</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Online spirituelt<br>3 mdr. forløb</h3>
-                    <p>12 gange hvor du lærer at mestre metoder og teknikker til at mærke dig selv, skabe ro og balance indvendig, lytte til din intuition og berolige dit nervesystem. Du lærer at tage clairvoyante beskeder ned til dig selv.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Online Mindset forløb<br>- 6 mdr.</h3>
-                    <p>Hver anden uge med undervisning/øvelser og sparringssamtaler i mindset. Et intenst transformerende forløb hvor du bliver guidet igennem hele processen.</p>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Online mentorforløb<br>- 3 mdr.</h3>
-                    <p>6 gange hvor du kan vælge mellem spirituelt eller mindset coaching. Du bestemmer selv fra gang til gang hvad du ønsker coaching på.</p>
-                </div>
-            </div>
-            
-            <p class="services-cta-text">Er du interesseret i at høre mere omkring dette, så book en gratis afklarende samtale med mig.</p>
-            <button class="services-cta-button" onclick="scrollToContact()">Ja, jeg er nysgerrig</button>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="anmeldelser" class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Hvad siger mine klienter?</h2>
+            <h2 class="section-title">Kunde Udtalelser</h2>
             <div class="slideshow-container">
-                <button class="slide-btn" onclick="changeSlide(-1)">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <button class="slide-btn prev-btn" onclick="changeSlide(-1)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </button>
                 
@@ -152,26 +85,12 @@
                     <div class="testimonial-slide active">
                         <div class="testimonial-card">
                             <div class="quote-icon">"</div>
-                            <p class="testimonial-text">Majken har en fantastisk evne til at guide en gennem personlige udfordringer med varme og visdom. Hendes spirituelle tilgang har hjulpet mig med at finde indre ro.</p>
-                            <div class="testimonial-author">
-                                <div class="author-avatar">S</div>
-                                <div class="author-info">
-                                    <h4>Sarah</h4>
-                                    <span>Klient</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="quote-icon">"</div>
-                            <p class="testimonial-text">Det spirituelle forløb med Majken har været transformerende. Jeg har lært at lytte til min intuition og fundet en dybere forbindelse til mig selv.</p>
+                            <p class="testimonial-text">Gennem mit forløb med Livsstadier har jeg fundet en indre ro, jeg ikke vidste eksisterede. Processen har været transformerende og har givet mig redskaber til at navigere livets udfordringer.</p>
                             <div class="testimonial-author">
                                 <div class="author-avatar">M</div>
                                 <div class="author-info">
-                                    <h4>Maria</h4>
-                                    <span>Klient</span>
+                                    <h4>Maria Andersen</h4>
+                                    <span>København</span>
                                 </div>
                             </div>
                         </div>
@@ -180,23 +99,36 @@
                     <div class="testimonial-slide">
                         <div class="testimonial-card">
                             <div class="quote-icon">"</div>
-                            <p class="testimonial-text">Majkens mindset coaching har givet mig værktøjer til at håndtere stress og skabe mere balance i mit liv. Jeg kan varmt anbefale hendes forløb.</p>
+                            <p class="testimonial-text">Jeg var skeptisk i starten, men den individuelle tilgang og dybe forståelse har hjulpet mig med at bryde negative mønstre og skabe positive forandringer i mit liv.</p>
                             <div class="testimonial-author">
                                 <div class="author-avatar">L</div>
                                 <div class="author-info">
-                                    <h4>Louise</h4>
-                                    <span>Klient</span>
+                                    <h4>Lars Nielsen</h4>
+                                    <span>Aarhus</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="quote-icon">"</div>
+                            <p class="testimonial-text">Den professionelle vejledning og støtte har været uvurderlig. Jeg har lært at forstå mig selv på en helt ny måde og har fundet styrke, jeg ikke vidste, jeg havde.</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">A</div>
+                                <div class="author-info">
+                                    <h4>Anne Petersen</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <button class="slide-btn" onclick="changeSlide(1)">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
+            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div class="slide-indicators">
@@ -207,105 +139,57 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Hvad tilbyder jeg Section -->
+    <section id="hvad-tilbyder-jeg" class="services">
+        <div class="container">
+            <h2 class="section-title">Hvad tilbyder jeg?</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Online spirituelt 3 mdr. forløb</h3>
+                    <p>12 gange hvor du lærer at mestre metoder og teknikker til at mærke dig selv, skabe ro og balance indvendig, lytte til din intuition og berolige dit nervesystem. Du lærer at tage clairvoyante beskeder ned til dig selv.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Online Mindset forløb - 6 mdr.</h3>
+                    <p>Hver anden uge med undervisning/øvelser og sparringssamtaler i mindset. Et intenst transformerende forløb hvor du bliver guidet igennem hele processen.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Online mentorforløb - 3 mdr.</h3>
+                    <p>6 gange hvor du kan vælge mellem spirituelt eller mindset coaching. Du bestemmer selv fra gang til gang hvad du ønsker coaching på.</p>
+                </div>
+            </div>
+            
+            <!-- Shared call-to-action section -->
+            <div class="services-cta">
+                <p class="services-cta-text"><strong>Er du interesseret i at høre mere omkring dette, så book en gratis afklarende samtale med mig.</strong></p>
+                <button class="services-cta-button" onclick="scrollToContact()">Ja, jeg er nysgerrig</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
     <section id="om-mig" class="about">
         <div class="container">
             <div class="about-content">
                 <div class="about-image">
-                    <img src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" 
-                         alt="Majken Park" 
-                         class="about-photo"
-                         loading="lazy"
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="about-image-fallback" style="display: none;">
-                        <div class="fallback-content">
-                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
-                                <line x1="9" y1="9" x2="9.01" y2="9"/>
-                                <line x1="15" y1="9" x2="15.01" y2="9"/>
-                            </svg>
-                        </div>
-                    </div>
+                    <img src="public/image copy copy.png" alt="Professionel coach" class="about-photo">
                 </div>
                 <div class="about-text">
-                    <h2 class="section-title">Om mig</h2>
+                    <h2 class="section-title">Om Mig</h2>
                     <p class="about-description">
-                        Jeg er Majken Park, og jeg brænder for at hjælpe mennesker med at finde deres indre balance og styrke. 
-                        Med mange års erfaring inden for spirituel vejledning og personlig udvikling, guider jeg dig gennem 
-                        transformative processer, der kan bringe mere ro, klarhed og mening til dit liv.
+                        Jeg har igennem mange år via mit arbejde som sagsbehandler haft flere 1000 samtaler med folk, som har både fysiske og psykiske diagnoser. Jeg blev færdig i 2019 med uddannelsen som kognitiv adfærdsterapeut. I marts 2025 blev jeg eksamineret som uddannet clairvoyant og er ligeledes påbegyndt healer uddannelsen. Det sidste, jeg har beskæftiget mig med, er mindset træning.
                     </p>
                     <p class="about-description">
-                        Min tilgang kombinerer spirituelle metoder med praktiske værktøjer, så du kan skabe varige forandringer 
-                        i dit liv. Jeg tror på, at vi alle har svarene i os selv - vi skal bare lære at lytte.
+                        Jeg brænder for at hjælpe mennesker med at få et højere selvværd og viser dem vejen dertil igennem redskaber og coaching samtaler og kombinerer min viden og erfaring.
+                        Jeg hjælper andre, fordi jeg selv har haft et meget lavt selvværd og har nu opnået det modsatte og vil gerne hjælpe med, at DU kan få det ligeså godt, som jeg selv har fået.
                     </p>
-                    <div class="qualifications">
-                        <h3>Mine kvalifikationer:</h3>
-                        <ul>
-                            <li>Certificeret spirituel vejleder</li>
-                            <li>Mindset coach</li>
-                            <li>Clairvoyant rådgiver</li>
-                            <li>Personlig udvikling specialist</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="kontakt" class="contact">
-        <div class="contact-wrapper">
-            <h2 class="section-title">Kontakt</h2>
-            
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2"/>
-                            <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Email</h3>
-                        <p>majkenpark@hotmail.com</p>
-                    </div>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2"/>
-                        </svg>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Telefon</h3>
-                        <p>+45 12 34 56 78</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="social-media-section">
-                <h3>Følg mig på sociale medier</h3>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/majkenparklarsen/" target="_blank" rel="noopener noreferrer" class="social-link instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                        Instagram
-                    </a>
-                    <a href="https://www.facebook.com/majken.p.pedersen/photos" target="_blank" rel="noopener noreferrer" class="social-link facebook">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Facebook
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
