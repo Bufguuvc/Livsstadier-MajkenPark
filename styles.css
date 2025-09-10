@@ -141,89 +141,6 @@ h6 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* Mobile Header Visibility Fixes - Desktop Unaffected */
-@media (max-width: 768px) {
-    /* Ensure navbar is always visible on mobile */
-    .navbar {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px);
-        z-index: 1000;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* Ensure nav container maintains proper height */
-    .nav-container {
-        height: 70px;
-        padding: 0 1rem;
-    }
-    
-    /* Ensure logo is visible and properly sized */
-    .nav-logo {
-        display: flex;
-        align-items: center;
-        z-index: 1001;
-    }
-    
-    .nav-logo-image {
-        height: 35px;
-        width: auto;
-        object-fit: contain;
-    }
-    
-    /* Ensure hamburger menu is visible */
-    .nav-toggle {
-        display: flex;
-        z-index: 1001;
-        position: relative;
-    }
-    
-    /* Mobile menu styling */
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background-color: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px);
-        width: 100%;
-        text-align: center;
-        transition: left 0.3s ease;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.15);
-        padding: 2rem 0;
-        z-index: 999;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        max-height: calc(100vh - 70px);
-        overflow-y: auto;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-    
-    .nav-item {
-        margin: 0.5rem 0;
-    }
-    
-    .nav-link {
-        display: block;
-        padding: 1rem;
-        font-size: 1.1rem;
-        font-weight: 500;
-        color: #4a5568;
-        transition: all 0.3s ease;
-    }
-    
-    .nav-link:hover,
-    .nav-link.active {
-        background-color: #f8f9fa;
-        color: #2d3748;
-    }
-}
-
 /* Hero Section */
 .hero {
     position: relative;
@@ -1421,6 +1338,45 @@ h6 {
 }
 
 @media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+        z-index: 999;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 1rem;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+        background-color: #f8f9fa;
+        color: #2d3748;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
     /* Hero Section Mobile Fixes */
     .hero {
         min-height: 100vh;
