@@ -257,4 +257,4 @@ function initializeTestimonialBanner() {
     }, { threshold: 0.1 });
     
     bannerObserver.observe(bannerContainer);
-});
+}
