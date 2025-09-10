@@ -133,6 +133,8 @@ h6 {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    /* Ensure content doesn't get hidden behind fixed navbar */
+    padding-top: 70px;
 }
 
 .hero-background {
@@ -160,6 +162,8 @@ h6 {
     margin: 0 auto;
     padding: 0 2rem;
     color: white;
+    /* Additional top padding for mobile safety */
+    padding-top: 2rem;
 }
 
 .hero-layout {
@@ -189,6 +193,8 @@ h6 {
     text-align: center;
     position: relative;
     text-transform: uppercase;
+    /* Ensure title has enough top margin on all devices */
+    margin-top: 1rem;
 }
 
 .hero-title::after {
@@ -1350,6 +1356,22 @@ h6 {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    /* Mobile-specific hero adjustments */
+    .hero {
+        /* Increase top padding for mobile to account for navbar */
+        padding-top: 90px;
+        /* Reduce height slightly to ensure content fits */
+        min-height: 100vh;
+        height: auto;
+    }
+
+    .hero-content {
+        /* Additional top padding for mobile safety */
+        padding-top: 1rem;
+        /* Ensure content doesn't touch screen edges */
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
     .hero-title {
         font-size: 2.5rem;
     }
@@ -1388,6 +1410,10 @@ h6 {
 
     .hero-title {
         font-size: 2.5rem;
+        /* Reduce top margin on mobile for better spacing */
+        margin-top: 0.5rem;
+        /* Ensure adequate bottom margin */
+        margin-bottom: 1.5rem;
     }
 
     .hero-image {
@@ -1421,5 +1447,51 @@ h6 {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
+    }
+}
+/* Additional breakpoint for very small mobile devices */
+@media (max-width: 480px) {
+    .hero {
+        /* Extra padding for very small screens */
+        padding-top: 100px;
+    }
+    
+    .hero-content {
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        /* Reduce letter spacing on very small screens */
+        letter-spacing: 0.1em;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        /* Reduce padding in landscape to maximize content area */
+        padding-top: 80px;
+        /* Use min-height instead of height for landscape */
+        min-height: 100vh;
+        height: auto;
+    }
+    
+    .hero-content {
+        padding-top: 0.5rem;
+    }
+    
+    .hero-title {
+        font-size: 2.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-image {
+        width: 250px;
+        height: 300px;
     }
 }
