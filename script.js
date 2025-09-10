@@ -1,6 +1,5 @@
 // Page Loader
 window.addEventListener('load', function() {
-    console.log('Page loaded successfully');
     const loader = document.querySelector('.page-loader');
     if (loader) {
         setTimeout(() => {
@@ -17,11 +16,8 @@ const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
 const body = document.body;
 
-console.log('Navigation elements found:', { navToggle: !!navToggle, navMenu: !!navMenu });
-
 if (navToggle && navMenu) {
     navToggle.addEventListener('click', function() {
-        console.log('Mobile menu toggle clicked');
         navMenu.classList.toggle('active');
         navToggle.classList.toggle('active');
         
@@ -65,18 +61,14 @@ if (navToggle && navMenu) {
 
 // Smooth Scrolling for Navigation Links
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM Content Loaded - Initializing navigation');
-    
     // Smooth Scrolling for Navigation Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            console.log('Navigation link clicked:', this.getAttribute('href'));
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const target = document.querySelector(targetId);
             
             if (target) {
-                console.log('Scrolling to target:', targetId);
                 // Update active navigation state immediately
                 updateActiveNavLink(targetId);
                 
