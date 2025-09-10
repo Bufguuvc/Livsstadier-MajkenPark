@@ -1049,12 +1049,6 @@ body {
 }
 
 .privacy-section-content p {
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
-}
-
 /* Testimonial Banner Responsive Design */
 @media (max-width: 1024px) {
     .testimonial-item {
