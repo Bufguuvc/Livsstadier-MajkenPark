@@ -1,0 +1,6 @@
+# Netlify redirects file
+/*    /index.html   200
+
+# Handle SPA routing
+/privatlivspolitik    /privatlivspolitik.html    200
+/handelsbetingelser   /handelsbetingelser.html   200
