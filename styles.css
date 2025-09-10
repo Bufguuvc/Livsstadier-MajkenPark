@@ -205,9 +205,17 @@ h6 {
     text-align: center;
     position: relative;
     text-transform: uppercase;
-    z-index: 10;
-    display: block;
-    visibility: visible;
+    z-index: 9999 !important;
+    display: block !important;
+    visibility: visible !important;
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8) !important;
+    background: rgba(0, 0, 0, 0.3) !important;
+    padding: 1rem 2rem !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    max-width: 500px !important;
+    margin: 0 auto 2rem auto !important;
 }
 
 .hero-title::after {
