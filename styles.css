@@ -12,35 +12,6 @@ body {
     background-color: #f8f9fa;
 }
 
-/* Heading Typography - Consistent with body font */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', sans-serif;
-}
-
-h1 {
-    font-weight: 600;
-}
-
-h2 {
-    font-weight: 600;
-}
-
-h3 {
-    font-weight: 600;
-}
-
-h4 {
-    font-weight: 500;
-}
-
-h5 {
-    font-weight: 500;
-}
-
-h6 {
-    font-weight: 500;
-}
-
 /* Navigation */
 .navbar {
     position: fixed;
@@ -115,8 +86,6 @@ h6 {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    z-index: 1001;
-    position: relative;
 }
 
 .bar {
@@ -124,21 +93,7 @@ h6 {
     height: 3px;
     background: #4a5568;
     margin: 3px 0;
-    transition: all 0.3s ease;
-    border-radius: 2px;
-}
-
-/* Mobile menu toggle animations */
-.nav-toggle.active .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.nav-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.nav-toggle.active .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
+    transition: 0.3s;
 }
 
 /* Hero Section */
@@ -200,9 +155,20 @@ h6 {
     font-weight: 400;
     margin-bottom: 2rem;
     line-height: 1.2;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.2em;
     text-align: center;
-    text-transform: uppercase;
+    position: relative;
+}
+
+.hero-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 2px;
+    background: white;
 }
 
 .hero-description {
@@ -336,18 +302,16 @@ h6 {
 /* Section titles */
 .section-title {
     font-size: 2.5rem;
-    font-weight: 400;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 3rem;
     color: #2d3748;
-    letter-spacing: 0.1em;
 }
 
 /* Services Section */
 .services {
     padding: 5rem 0;
     background: white;
-    margin-bottom: 6rem;
 }
 
 .services-grid {
@@ -377,42 +341,42 @@ h6 {
 /* Removed service-icon styles as icons are no longer used */
 
 .service-card h3 {
-    color: white;
+    color: white; /* Updated heading color for brown background */
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 2rem;
-    line-height: 1.3;
-    margin-top: 0;
+    margin-bottom: 2rem; /* Increased spacing after heading */
+    line-height: 1.3; /* Improved line height for headings */
+    margin-top: 0; /* Reset top margin */
 }
 
 .service-card p {
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for body text */
+    line-height: 1.8; /* Increased line spacing for better readability */
     font-size: 1rem;
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.3px;
+    margin-bottom: 1.5rem; /* Increased spacing between paragraphs */
+    letter-spacing: 0.3px; /* Subtle letter spacing for cleaner appearance */
 }
 
 /* Shared call-to-action section styling */
 .services-cta {
     text-align: center;
-    margin-top: 2rem; /* Reduced spacing to bring CTA closer to service cards */
+    margin-top: 4rem; /* Increased spacing above CTA section */
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    padding: 1rem 1rem; /* Reduced padding for tighter layout */
+    padding: 2rem 1rem; /* Added padding for better spacing */
 }
 
 .services-cta-text {
     font-size: 1.1rem;
     color: #2d3748;
-    margin-bottom: 1rem; /* Further reduced spacing for closer positioning */
+    margin-bottom: 2.5rem; /* Increased spacing before button */
     line-height: 1.7; /* Improved line height */
     font-weight: 500; /* Slightly bolder for emphasis */
 }
 
 .services-cta-button {
-    background: #1c8a75;
+    background: #8F908E; /* Match the card color */
     color: white;
     border: none;
     padding: 1.2rem 2.5rem; /* Increased padding for better proportions */
@@ -421,15 +385,15 @@ h6 {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(28, 138, 117, 0.3);
+    box-shadow: 0 4px 15px rgba(143, 144, 142, 0.3); /* Updated shadow */
     text-transform: none;
     letter-spacing: 0.8px; /* Increased letter spacing for elegance */
 }
 
 .services-cta-button:hover {
-    background: #156b5c;
+    background: #7a7b79; /* Darker gray on hover */
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(28, 138, 117, 0.4);
+    box-shadow: 0 6px 20px rgba(143, 144, 142, 0.4); /* Updated hover shadow */
 }
 
 /* Legacy button styles - keeping for any remaining instances */
@@ -470,17 +434,11 @@ h6 {
     .services-cta-text {
         font-size: 1rem;
         line-height: 1.6; /* Maintained good line height on smaller screens */
-        margin-bottom: 1rem; /* Further reduced for closer positioning */
     }
     
     .services-cta-button {
         padding: 1rem 2rem; /* Maintained good proportions */
         font-size: 1rem;
-    }
-    
-    .services-cta {
-        margin-top: 1.5rem; /* Reduced spacing on medium screens */
-        padding: 1rem 1rem;
     }
 }
 
@@ -502,7 +460,7 @@ h6 {
     }
     
     .services-cta {
-        margin-top: 1.5rem; /* Reduced spacing for closer positioning */
+        margin-top: 3rem; /* Maintained good spacing */
         padding: 1.5rem 1rem;
     }
 }
@@ -532,13 +490,13 @@ h6 {
     }
     
     .services-cta {
-        margin-top: 1.5rem; /* Reduced spacing for mobile */
+        margin-top: 2.5rem; /* Maintained good spacing */
         padding: 1.5rem 0.5rem;
     }
     
     .services-cta-text {
         font-size: 0.95rem;
-        margin-bottom: 1rem; /* Further reduced for closer positioning */
+        margin-bottom: 2rem; /* Maintained good spacing */
         line-height: 1.6;
     }
     
@@ -568,18 +526,13 @@ h6 {
     
     .services-cta-text {
         font-size: 0.9rem;
-        margin-bottom: 0.8rem; /* Further reduced for very small screens */
+        margin-bottom: 1.8rem; /* Maintained good spacing */
         line-height: 1.5;
     }
     
     .services-cta-button {
         padding: 0.9rem 1.8rem; /* Maintained good proportions */
         font-size: 0.9rem;
-    }
-    
-    .services-cta {
-        margin-top: 1.2rem; /* Minimal spacing on very small screens */
-        padding: 1rem 0.5rem;
     }
 }
 /* Testimonials */
@@ -613,21 +566,21 @@ h6 {
 }
 
 .testimonial-item {
-    background: #4a5568;
+    background: #8F908E;
     padding: 2.5rem;
     border-radius: 15px;
     text-align: left;
     position: relative;
     min-width: 500px;
     max-width: 500px;
-    box-shadow: 0 5px 15px rgba(74, 85, 104, 0.2);
+    box-shadow: 0 5px 15px rgba(143, 144, 142, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(74, 85, 104, 0.1);
+    border: 1px solid rgba(143, 144, 142, 0.1);
 }
 
 .testimonial-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(74, 85, 104, 0.3);
+    box-shadow: 0 10px 25px rgba(143, 144, 142, 0.3);
 }
 
 .testimonial-stars {
@@ -669,7 +622,7 @@ h6 {
 
 .author-info h4 {
     color: white;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 0.25rem;
     font-size: 1rem;
 }
@@ -753,7 +706,6 @@ h6 {
 .about-text .section-title {
     text-align: left;
     margin-bottom: 2rem;
-    font-weight: 400;
 }
 
 .about-description {
@@ -804,10 +756,11 @@ h6 {
 
 .contact .section-title {
     font-size: 2.5rem;
-    font-weight: 400;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 4rem;
     color: #2d3748;
+}
 
 .contact-grid {
     display: flex;
@@ -1095,7 +1048,6 @@ h6 {
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #333;
-    letter-spacing: 0.05em;
 }
 
 .privacy-section-content {
@@ -1312,35 +1264,30 @@ h6 {
         background-color: white;
         width: 100%;
         text-align: center;
-        transition: left 0.3s ease;
+        transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
         z-index: 999;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
     }
 
     .nav-menu.active {
         left: 0;
     }
-    
-    .nav-item {
-        margin: 0.5rem 0;
-    }
-    
-    .nav-link {
-        display: block;
-        padding: 1rem;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-    }
-    
-    .nav-link:hover {
-        background-color: #f8f9fa;
-        color: #2d3748;
-    }
 
     .nav-toggle {
         display: flex;
+    }
+    
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     .hero-title {
