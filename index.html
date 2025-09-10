@@ -3,29 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livsstadier</title>
-    <meta name="description" content="Professionel coaching og konsultation til at finde indre ro, balance og en dybere forståelse af dig selv.">
+    <title>Majken Park | Livsstadier – Mindset & Spirituelle Forløb Online</title>
+    <meta name="description" content="Styrk dit selvværd og find indre ro med Majken Park & Livsstadier. Online mindset- og spirituelle forløb. Book en gratis, uforpligtende samtale.">
+    <meta name="keywords" content="Majken Park, Livsstadier, mindset forløb online, spirituel coaching, mentorforløb, gratis samtale, selvudvikling, selvværd, online coaching, personlig udvikling">
+    <meta property="og:title" content="Majken Park | Livsstadier – Mindset & Spirituelle Forløb Online">
+    <meta property="og:description" content="Styrk dit selvværd og find indre ro med Majken Park & Livsstadier. Online mindset- og spirituelle forløb. Book en gratis, uforpligtende samtale.">
+    <meta property="og:image" content="./public/majkenpark.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://complete-livsstadier-gtu9.bolt.host/">
+    <link rel="canonical" href="https://complete-livsstadier-gtu9.bolt.host/">
+    <link rel="icon" href="./public/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./public/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./public/favicon.png">
+    <link rel="shortcut icon" href="./public/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./public/favicon.png">
+    
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="public/image.png" alt="Header Logo" class="nav-logo-image">
+                <img src="./public/livsstadier.png" alt="Header Logo" class="nav-logo-image">
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#hjem" class="nav-link active">Forside</a>
+                    <a href="#hero" class="nav-link active">Forside</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#hvad-tilbyder-jeg" class="nav-link">Hvad tilbyder jeg?</a>
+                    <a href="#services" class="nav-link">Hvad tilbyder jeg?</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#om-mig" class="nav-link">Om mig</a>
+                    <a href="#about" class="nav-link">Om mig</a>
                 </li>
             </ul>
             <div class="nav-toggle">
@@ -37,13 +52,13 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hjem" class="hero">
+    <section id="hero" class="hero">
         <div class="hero-background"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-layout">
                 <div class="hero-text">
-                    <h1 class="hero-title">MAJKEN PARK</h1>
+                    <h1 class="hero-title">Majken Park</h1>
                     <div class="hero-social-container">
                         <div class="hero-social-links">
                             <a href="https://www.facebook.com/majken.p.pedersen/photos" target="_blank" rel="noopener noreferrer" class="hero-social-link facebook" aria-label="Følg os på Facebook">
@@ -64,7 +79,7 @@
                     </div>
                 </div>
                 <div class="hero-image-container">
-                    <img src="public/image copy.png" alt="Majken Park" class="hero-image">
+                    <img src="./public/majkenpark.png" alt="Majken Park" class="hero-image">
                 </div>
             </div>
         </div>
@@ -73,131 +88,140 @@
     <!-- Customer Testimonials -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">Kunde Udtalelser</h2>
-            <div class="slideshow-container">
-                <button class="slide-btn prev-btn" onclick="changeSlide(-1)">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                
-                <div class="testimonials-wrapper">
-                    <div class="testimonial-slide active">
-                        <div class="testimonial-card">
-                            <div class="quote-icon">"</div>
-                            <p class="testimonial-text">Gennem mit forløb med Livsstadier har jeg fundet en indre ro, jeg ikke vidste eksisterede. Processen har været transformerende og har givet mig redskaber til at navigere livets udfordringer.</p>
-                            <div class="testimonial-author">
-                                <div class="author-avatar">M</div>
-                                <div class="author-info">
-                                    <h4>Maria Andersen</h4>
-                                    <span>København</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="quote-icon">"</div>
-                            <p class="testimonial-text">Jeg var skeptisk i starten, men den individuelle tilgang og dybe forståelse har hjulpet mig med at bryde negative mønstre og skabe positive forandringer i mit liv.</p>
-                            <div class="testimonial-author">
-                                <div class="author-avatar">L</div>
-                                <div class="author-info">
-                                    <h4>Lars Nielsen</h4>
-                                    <span>Aarhus</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-slide">
-                        <div class="testimonial-card">
-                            <div class="quote-icon">"</div>
-                            <p class="testimonial-text">Den professionelle vejledning og støtte har været uvurderlig. Jeg har lært at forstå mig selv på en helt ny måde og har fundet styrke, jeg ikke vidste, jeg havde.</p>
-                            <div class="testimonial-author">
-                                <div class="author-avatar">A</div>
-                                <div class="author-info">
-                                    <h4>Anne Petersen</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h2 class="section-title">Hvad andre oplever</h2>
             
-            <div class="slide-indicators">
-                <span class="indicator active" onclick="goToSlide(0)"></span>
-                <span class="indicator" onclick="goToSlide(1)"></span>
-                <span class="indicator" onclick="goToSlide(2)"></span>
+            <!-- Scrolling Banner Container -->
+            <div class="testimonial-banner-container">
+                <div class="testimonial-banner" id="testimonialBanner">
+                    <!-- First set of testimonials -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-stars">⭐️⭐️⭐️⭐️⭐️</div>
+                        <p class="testimonial-text">"Jeg er ovenud glad for, at jeg tog beslutningen om at starte på dit mindset kursus 💕 Efter kun 4 samtaler kan jeg allerede mærke positive forandringer. Mit selvværd vokser, og jeg træffer beslutninger med mere ro i maven. Tak 🙏"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">C</div>
+                            <div class="author-info">
+                                <h4>Camilla</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-stars">⭐️⭐️⭐️⭐️⭐️</div>
+                        <p class="testimonial-text">"Jeg er så mega glad for at være startet på dit mindset kursus! 😃 Allerede efter 3 gange kan jeg mærke en kæmpe forskel i min hverdag. Jeg har mere overskud, er mindre bekymret og har fundet glæde og ro indeni ❤️"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">S</div>
+                            <div class="author-info">
+                                <h4>Sofie</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-stars">⭐️⭐️⭐️⭐️⭐️</div>
+                        <p class="testimonial-text">"Samtalerne med Majken har givet mig nye indsigter, styrket mit selvværd og gjort mig mere bevidst om mine valg. Jeg føler mig stærkere, mere motiveret og har fået handlekraft i min hverdag."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">A</div>
+                            <div class="author-info">
+                                <h4>Anders</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-stars">⭐️⭐️⭐️⭐️⭐️</div>
+                        <p class="testimonial-text">"Majkens workshop gav mig en ro og klarhed, jeg ikke havde oplevet før 🌿 Meditationen er nu blevet et vigtigt værktøj i min hverdag, når jeg har brug for ekstra fokus. Hvis du er nysgerrig på det spirituelle, er hendes workshop et fantastisk sted at starte 🙌"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">M</div>
+                            <div class="author-info">
+                                <h4>Maria</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-stars">⭐️⭐️⭐️⭐️⭐️</div>
+                        <p class="testimonial-text">"Jeg var skeptisk i starten, men den individuelle tilgang hjalp mig med at bryde negative mønstre og skabe positive forandringer i mit liv."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">L</div>
+                            <div class="author-info">
+                                <h4>Lars</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-stars">⭐️⭐️⭐️⭐️⭐️</div>
+                        <p class="testimonial-text">"Jeg er ovenud glad for, at jeg tog beslutningen om at starte på dit mindset kursus 💕 Efter kun 4 samtaler kan jeg allerede mærke positive forandringer. Mit selvværd vokser, og jeg træffer beslutninger med mere ro i maven. Tak 🙏"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">C</div>
+                            <div class="author-info">
+                                <h4>Camilla</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-stars">⭐️⭐️⭐️⭐️⭐️</div>
+                        <p class="testimonial-text">"Jeg er så mega glad for at være startet på dit mindset kursus! 😃 Allerede efter 3 gange kan jeg mærke en kæmpe forskel i min hverdag. Jeg har mere overskud, er mindre bekymret og har fundet glæde og ro indeni ❤️"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">S</div>
+                            <div class="author-info">
+                                <h4>Sofie</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-stars">⭐️⭐️⭐️⭐️⭐️</div>
+                        <p class="testimonial-text">"Samtalerne med Majken har givet mig nye indsigter, styrket mit selvværd og gjort mig mere bevidst om mine valg. Jeg føler mig stærkere, mere motiveret og har fået handlekraft i min hverdag."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">A</div>
+                            <div class="author-info">
+                                <h4>Anders</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Hvad tilbyder jeg Section -->
-    <section id="hvad-tilbyder-jeg" class="services">
+    <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Hvad tilbyder jeg?</h2>
+            <h2 class="section-title">Hvad jeg tilbyder</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M19 10v2a7 7 0 0 1-14 0v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <line x1="12" y1="19" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <line x1="8" y1="23" x2="16" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3>Online spirituelt 3 mdr. forløb</h3>
+                    <h3>Online spirituelt forløb – 3 mdr.</h3>
                     <p>12 gange hvor du lærer at mestre metoder og teknikker til at mærke dig selv, skabe ro og balance indvendig, lytte til din intuition og berolige dit nervesystem. Du lærer at tage clairvoyante beskeder ned til dig selv.</p>
-                    <p><strong>Er du interesseret i at høre mere omkring dette, så book en gratis afklarende samtale med mig.</strong></p>
-                    <button class="service-booking-btn" onclick="scrollToContact()">Ja, jeg er nysgerrig</button>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3>Online Mindset forløb - 6 mdr.</h3>
+                    <h3>Online mindset forløb – 6 mdr.</h3>
                     <p>Hver anden uge med undervisning/øvelser og sparringssamtaler i mindset. Et intenst transformerende forløb hvor du bliver guidet igennem hele processen.</p>
-                    <p><strong>Er du interesseret i at høre mere omkring dette, så book en gratis afklarende samtale med mig.</strong></p>
-                    <button class="service-booking-btn" onclick="scrollToContact()">Ja, jeg er nysgerrig</button>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 11h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M12 16h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M8 11h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            <path d="M8 16h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
                     <h3>Online mentorforløb - 3 mdr.</h3>
                     <p>6 gange hvor du kan vælge mellem spirituelt eller mindset coaching. Du bestemmer selv fra gang til gang hvad du ønsker coaching på.</p>
-                    <p><strong>Er du interesseret i at høre mere omkring dette, så book en gratis afklarende samtale med mig.</strong></p>
-                    <button class="service-booking-btn" onclick="scrollToContact()">Ja, jeg er nysgerrig</button>
                 </div>
+            </div>
+            
+            <!-- Shared call-to-action section -->
+            <div class="services-cta">
+                <p class="services-cta-text">Er du interesseret i at høre mere om dette eller i at booke en gratis, afklarende samtale med mig, så tryk på knappen nedenfor.</p>
+                <button class="services-cta-button" onclick="window.open('https://www.facebook.com/messages/t/majken.p.pedersen', '_blank')">Ja, jeg er nysgerrig</button>
             </div>
         </div>
     </section>
 
     <!-- About Me Section -->
-    <section id="om-mig" class="about">
+    <section id="about" class="about">
         <div class="container">
             <div class="about-content">
                 <div class="about-image">
-                    <img src="public/image copy copy.png" alt="Professionel coach" class="about-photo">
+                    <img src="./public/majken.png" alt="Majken Park - Professionel coach" class="about-photo">
                 </div>
                 <div class="about-text">
                     <h2 class="section-title">Om Mig</h2>
@@ -240,13 +264,17 @@
             <div class="footer-copyright">
                 <p>&copy; Livsstadier. Alle rettigheder forbeholdes.</p>
                 <div class="footer-links">
-                    <a href="privatlivspolitik.html" class="privacy-link">Privatlivspolitik</a>
-                    <a href="handelsbetingelser.html" class="privacy-link">Handelsbetingelser</a>
+                    <a href="./privatlivspolitik.html" class="privacy-link">Privatlivspolitik</a>
+                    <a href="./handelsbetingelser.html" class="privacy-link">Handelsbetingelser</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <section id="seo-headings" style="position:absolute!important;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;">
+        <h4>Mentorforløb · Mindset forløb · Spirituelle workshops</h4>
+    </section>
+
+    <script src="./script.js"></script>
 </body>
 </html>
