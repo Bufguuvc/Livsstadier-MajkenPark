@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Majken Park - Professionel Massør</title>
+    <title>Livsstadier - MajkenPark</title>
+    <meta name="description" content="Professionel coaching og konsultation til at finde indre ro, balance og en dybere forståelse af dig selv.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -12,24 +15,17 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="majken.png" alt="Majken Park Logo" class="nav-logo-image">
-                <span class="logo-text">Majken Park</span>
+                <img src="public/image.png" alt="Header Logo" class="nav-logo-image">
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#hero" class="nav-link active">Hjem</a>
+                    <a href="#hjem" class="nav-link active">Forside</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#services" class="nav-link">Behandlinger</a>
+                    <a href="#hvad-tilbyder-jeg" class="nav-link">Hvad tilbyder jeg?</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#testimonials" class="nav-link">Anmeldelser</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">Om Mig</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#kontakt" class="nav-link">Kontakt</a>
+                    <a href="#om-mig" class="nav-link">Om mig</a>
                 </li>
             </ul>
             <div class="nav-toggle">
@@ -41,312 +37,217 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero">
+    <section id="hjem" class="hero">
         <div class="hero-background"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-layout">
                 <div class="hero-text">
-                    <h1 class="hero-title">Majken Park</h1>
-                    <p class="hero-description">
-                        Professionel massør med speciale i afspænding og velvære. 
-                        Book din behandling i dag og oplev forskellen.
-                    </p>
-                    
-                    <!-- Hero Social Links -->
+                    <h1 class="hero-title">MAJKEN PARK</h1>
                     <div class="hero-social-container">
                         <div class="hero-social-links">
-                            <a href="https://www.instagram.com/majkenpark/" target="_blank" class="hero-social-link instagram">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                                </svg>
-                                <span>Instagram</span>
-                            </a>
-                            <a href="https://www.facebook.com/majkenpark" target="_blank" class="hero-social-link facebook">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            <a href="https://www.facebook.com/majken.p.pedersen/photos" target="_blank" rel="noopener noreferrer" class="hero-social-link facebook" aria-label="Følg os på Facebook">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                                 <span>Facebook</span>
+                            </a>
+                            <a href="https://www.instagram.com/majkenparklarsen/" target="_blank" rel="noopener noreferrer" class="hero-social-link instagram" aria-label="Følg os på Instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                <span>Instagram</span>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="hero-image-container">
-                    <img src="majkenpark.png" alt="Majken Park - Professionel Massør" class="hero-image">
+                    <img src="public/image copy.png" alt="Majken Park" class="hero-image">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- Customer Testimonials -->
+    <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">Mine Behandlinger</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Afspændingsmassage</h3>
-                    <p>En beroligende massage der hjælper dig med at slappe af og reducere stress. Perfekt efter en lang dag eller uge.</p>
-                    <p>Varighed: 60-90 minutter</p>
-                </div>
-                <div class="service-card">
-                    <h3>Dybdemassage</h3>
-                    <p>Intensiv massage der arbejder med dybe muskelllag for at løsne spændinger og forbedre bevægeligheden.</p>
-                    <p>Varighed: 60-90 minutter</p>
-                </div>
-                <div class="service-card">
-                    <h3>Sportsmassage</h3>
-                    <p>Specialiseret massage for aktive mennesker. Hjælper med restitution og forebyggelse af skader.</p>
-                    <p>Varighed: 45-75 minutter</p>
-                </div>
-            </div>
+            <h2 class="section-title">Hvad andre oplever</h2>
             
-            <!-- Call-to-action section -->
-            <div class="services-cta">
-                <p class="services-cta-text">
-                    Klar til at opleve forskellen? Book din behandling i dag og giv dig selv den omsorg, du fortjener.
-                </p>
-                <button class="services-cta-button" onclick="scrollToContact()">
-                    Book Nu
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Hvad Mine Kunder Siger</h2>
-            <div class="testimonial-banner-container" tabindex="0" role="region" aria-label="Kundeanmeldelser">
+            <!-- Scrolling Banner Container -->
+            <div class="testimonial-banner-container">
                 <div class="testimonial-banner" id="testimonialBanner">
                     <!-- First set of testimonials -->
                     <div class="testimonial-item">
-                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text">"Majken er fantastisk! Hendes massage teknik er helt i top, og hun har en utrolig evne til at finde og løsne spændinger. Jeg føler mig altid som et nyt menneske efter en behandling hos hende."</p>
+                        <div class="testimonial-stars">⭐️⭐️⭐️⭐️⭐️</div>
+                        <p class="testimonial-text">"Jeg er ovenud glad for, at jeg tog beslutningen om at starte på dit mindset kursus 💕 Efter kun 4 samtaler kan jeg allerede mærke positive forandringer. Mit selvværd vokser, og jeg træffer beslutninger med mere ro i maven. Tak 🙏"</p>
                         <div class="testimonial-author">
-                            <div class="author-avatar">A</div>
+                            <div class="author-avatar">C</div>
                             <div class="author-info">
-                                <h4>Anna</h4>
-                                <span>Stamkunde</span>
+                                <h4>Camilla</h4>
                             </div>
                         </div>
                     </div>
                     
                     <div class="testimonial-item">
-                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text">"Jeg har været kunde hos Majken i over et år nu, og hun er simpelthen den bedste massør jeg nogensinde har været hos. Hun lytter til mine behov og tilpasser behandlingen perfekt."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">M</div>
-                            <div class="author-info">
-                                <h4>Michael</h4>
-                                <span>Stamkunde</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-item">
-                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text">"Professionel, venlig og utrolig dygtig. Majkens behandlinger har hjulpet mig enormt med mine rygsmerter. Kan varmt anbefale hende til alle!"</p>
+                        <div class="testimonial-stars">⭐️⭐️⭐️⭐️⭐️</div>
+                        <p class="testimonial-text">"Jeg er så mega glad for at være startet på dit mindset kursus! 😃 Allerede efter 3 gange kan jeg mærke en kæmpe forskel i min hverdag. Jeg har mere overskud, er mindre bekymret og har fundet glæde og ro indeni ❤️"</p>
                         <div class="testimonial-author">
                             <div class="author-avatar">S</div>
                             <div class="author-info">
-                                <h4>Sarah</h4>
-                                <span>Stamkunde</span>
+                                <h4>Sofie</h4>
                             </div>
                         </div>
                     </div>
                     
                     <div class="testimonial-item">
-                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text">"Majken har magiske hænder! Hun finder altid de rigtige punkter og ved præcis hvor meget tryk der skal til. Hendes klinik er også super hyggelig og afslappende."</p>
+                        <div class="testimonial-stars">⭐️⭐️⭐️⭐️⭐️</div>
+                        <p class="testimonial-text">"Samtalerne med Majken har givet mig nye indsigter, styrket mit selvværd og gjort mig mere bevidst om mine valg. Jeg føler mig stærkere, mere motiveret og har fået handlekraft i min hverdag."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">A</div>
+                            <div class="author-info">
+                                <h4>Anders</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-stars">⭐️⭐️⭐️⭐️⭐️</div>
+                        <p class="testimonial-text">"Majkens workshop gav mig en ro og klarhed, jeg ikke havde oplevet før 🌿 Meditationen er nu blevet et vigtigt værktøj i min hverdag, når jeg har brug for ekstra fokus. Hvis du er nysgerrig på det spirituelle, er hendes workshop et fantastisk sted at starte 🙌"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">M</div>
+                            <div class="author-info">
+                                <h4>Maria</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-stars">⭐️⭐️⭐️⭐️⭐️</div>
+                        <p class="testimonial-text">"Jeg var skeptisk i starten, men den individuelle tilgang hjalp mig med at bryde negative mønstre og skabe positive forandringer i mit liv."</p>
                         <div class="testimonial-author">
                             <div class="author-avatar">L</div>
                             <div class="author-info">
                                 <h4>Lars</h4>
-                                <span>Stamkunde</span>
                             </div>
                         </div>
                     </div>
                     
+                    <!-- Duplicate set for seamless loop -->
                     <div class="testimonial-item">
-                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text">"Som løber har jeg brug for regelmæssig massage, og Majken forstår virkelig sportsmassage. Hun hjælper mig med at holde mig skadefri og forbedre min præstation."</p>
+                        <div class="testimonial-stars">⭐️⭐️⭐️⭐️⭐️</div>
+                        <p class="testimonial-text">"Jeg er ovenud glad for, at jeg tog beslutningen om at starte på dit mindset kursus 💕 Efter kun 4 samtaler kan jeg allerede mærke positive forandringer. Mit selvværd vokser, og jeg træffer beslutninger med mere ro i maven. Tak 🙏"</p>
                         <div class="testimonial-author">
-                            <div class="author-avatar">J</div>
+                            <div class="author-avatar">C</div>
                             <div class="author-info">
-                                <h4>Julie</h4>
-                                <span>Løber</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Duplicate set for seamless scrolling -->
-                    <div class="testimonial-item">
-                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text">"Majken er fantastisk! Hendes massage teknik er helt i top, og hun har en utrolig evne til at finde og løsne spændinger. Jeg føler mig altid som et nyt menneske efter en behandling hos hende."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">A</div>
-                            <div class="author-info">
-                                <h4>Anna</h4>
-                                <span>Stamkunde</span>
+                                <h4>Camilla</h4>
                             </div>
                         </div>
                     </div>
                     
                     <div class="testimonial-item">
-                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text">"Jeg har været kunde hos Majken i over et år nu, og hun er simpelthen den bedste massør jeg nogensinde har været hos. Hun lytter til mine behov og tilpasser behandlingen perfekt."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">M</div>
-                            <div class="author-info">
-                                <h4>Michael</h4>
-                                <span>Stamkunde</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-item">
-                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text">"Professionel, venlig og utrolig dygtig. Majkens behandlinger har hjulpet mig enormt med mine rygsmerter. Kan varmt anbefale hende til alle!"</p>
+                        <div class="testimonial-stars">⭐️⭐️⭐️⭐️⭐️</div>
+                        <p class="testimonial-text">"Jeg er så mega glad for at være startet på dit mindset kursus! 😃 Allerede efter 3 gange kan jeg mærke en kæmpe forskel i min hverdag. Jeg har mere overskud, er mindre bekymret og har fundet glæde og ro indeni ❤️"</p>
                         <div class="testimonial-author">
                             <div class="author-avatar">S</div>
                             <div class="author-info">
-                                <h4>Sarah</h4>
-                                <span>Stamkunde</span>
+                                <h4>Sofie</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-stars">⭐️⭐️⭐️⭐️⭐️</div>
+                        <p class="testimonial-text">"Samtalerne med Majken har givet mig nye indsigter, styrket mit selvværd og gjort mig mere bevidst om mine valg. Jeg føler mig stærkere, mere motiveret og har fået handlekraft i min hverdag."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">A</div>
+                            <div class="author-info">
+                                <h4>Anders</h4>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Scroll indicators -->
-            <div class="scroll-indicators">
-                <div class="scroll-indicator"></div>
-                <div class="scroll-indicator"></div>
-                <div class="scroll-indicator"></div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Hvad tilbyder jeg Section -->
+    <section id="hvad-tilbyder-jeg" class="services">
+        <div class="container">
+            <h2 class="section-title">Hvad tilbyder jeg?</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Online spirituelt forløb – 3 mdr.</h3>
+                    <p>12 gange hvor du lærer at mestre metoder og teknikker til at mærke dig selv, skabe ro og balance indvendig, lytte til din intuition og berolige dit nervesystem. Du lærer at tage clairvoyante beskeder ned til dig selv.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Online mindset forløb – 6 mdr.</h3>
+                    <p>Hver anden uge med undervisning/øvelser og sparringssamtaler i mindset. Et intenst transformerende forløb hvor du bliver guidet igennem hele processen.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Online mentorforløb - 3 mdr.</h3>
+                    <p>6 gange hvor du kan vælge mellem spirituelt eller mindset coaching. Du bestemmer selv fra gang til gang hvad du ønsker coaching på.</p>
+                </div>
+            </div>
+            
+            <!-- Shared call-to-action section -->
+            <div class="services-cta">
+                <p class="services-cta-text"><strong>Er du interesseret i at høre mere omkring dette, så book en gratis afklarende samtale med mig.</strong></p>
+                <button class="services-cta-button" onclick="window.open('https://www.facebook.com/messages/t/majken.p.pedersen', '_blank')">Ja, jeg er nysgerrig</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="om-mig" class="about">
         <div class="container">
             <div class="about-content">
                 <div class="about-image">
-                    <img src="image.png" alt="Majken Park" class="about-photo">
+                    <img src="public/image copy copy.png" alt="Professionel coach" class="about-photo">
                 </div>
                 <div class="about-text">
                     <h2 class="section-title">Om Mig</h2>
                     <p class="about-description">
-                        Jeg er Majken Park, en passioneret og erfaren massør med mange års erfaring inden for massage og kropsbehandling. 
-                        Min mission er at hjælpe mine kunder med at opnå optimal velvære gennem professionelle og personligt tilpassede behandlinger.
+                        Jeg har igennem mange år via mit arbejde som sagsbehandler haft flere 1000 samtaler med folk, som har både fysiske og psykiske diagnoser. Jeg blev færdig i 2019 med uddannelsen som kognitiv adfærdsterapeut. I marts 2025 blev jeg eksamineret som uddannet clairvoyant og er ligeledes påbegyndt healer uddannelsen. Det sidste, jeg har beskæftiget mig med, er mindset træning.
                     </p>
                     <p class="about-description">
-                        Jeg tror på, at massage ikke kun handler om at slappe af - det handler om at tage vare på din krop og dit sind. 
-                        Hver behandling tilpasses dine specifikke behov og ønsker.
+                        Jeg brænder for at hjælpe mennesker med at få et højere selvværd og viser dem vejen dertil igennem redskaber og coaching samtaler og kombinerer min viden og erfaring.
+                        Jeg hjælper andre, fordi jeg selv har haft et meget lavt selvværd og har nu opnået det modsatte og vil gerne hjælpe med, at DU kan få det ligeså godt, som jeg selv har fået.
                     </p>
-                    <div class="qualifications">
-                        <h3>Mine Kvalifikationer</h3>
-                        <ul>
-                            <li>Certificeret Massør</li>
-                            <li>Specialisering i Dybdemassage</li>
-                            <li>Sportsmassage Certificering</li>
-                            <li>Løbende efteruddannelse</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="kontakt" class="contact">
-        <div class="contact-wrapper">
-            <h2 class="section-title">Kontakt Mig</h2>
-            
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                        </svg>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Telefon</h3>
-                        <p>+45 12 34 56 78</p>
-                    </div>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Email</h3>
-                        <p>kontakt@majkenpark.dk</p>
-                    </div>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                        </svg>
-                    </div>
-                    <div class="contact-details">
-                        <h3>Adresse</h3>
-                        <p>Eksempel Gade 123<br>2000 Frederiksberg</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="social-media-section">
-                <h3>Følg Mig</h3>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/majkenpark/" target="_blank" class="social-link instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                        <span>Instagram</span>
-                    </a>
-                    <a href="https://www.facebook.com/majkenpark" target="_blank" class="social-link facebook">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                        </svg>
-                        <span>Facebook</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-main">
                 <div class="footer-logo-section">
-                    <div class="footer-logo">
-                        <img src="majken.png" alt="Majken Park Logo">
-                        <span class="logo-text">Majken Park</span>
-                    </div>
-                    <p class="footer-tagline">Professionel massage og kropsbehandling</p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/majkenpark/" target="_blank" class="footer-social-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        <a href="https://www.instagram.com/majkenparklarsen/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </a>
-                        <a href="https://www.facebook.com/majkenpark" target="_blank" class="footer-social-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        <a href="https://www.facebook.com/majken.p.pedersen/photos" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </a>
                     </div>
                 </div>
             </div>
+            
             <div class="footer-copyright">
-                <p>&copy; 2024 Majken Park. Alle rettigheder forbeholdes.</p>
+                <p>&copy; Livsstadier. Alle rettigheder forbeholdes.</p>
                 <div class="footer-links">
                     <a href="privatlivspolitik.html" class="privacy-link">Privatlivspolitik</a>
                     <a href="handelsbetingelser.html" class="privacy-link">Handelsbetingelser</a>
