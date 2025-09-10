@@ -1,221 +1,1419 @@
-<!DOCTYPE html>
-<html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handelsbetingelser - Livsstadier</title>
-    <meta name="description" content="Handelsbetingelser for Livsstadier - Vilkår og betingelser for brug af vores tjenester">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Heading Typography - Consistent with body font */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+h4 {
+    font-weight: 500;
+}
+
+h5 {
+    font-weight: 500;
+}
+
+h6 {
+    font-weight: 500;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #4a5568;
+}
+
+.nav-logo-image {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-icon {
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #2d3748;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #4a5568;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: #4a5568;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Mobile menu toggle animations */
+.nav-toggle.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.nav-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #867566;
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    color: white;
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    letter-spacing: 0.15em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    margin-bottom: 0;
+    max-width: 500px;
+    margin-left: 0;
+    margin-right: 0;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #4a5568;
+    color: white;
+    padding: 1.25rem 2.5rem;
+    border: none;
+    border-radius: 60px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(74, 85, 104, 0.3);
+    position: relative;
+    overflow: hidden;
+    margin-top: 3rem;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(74, 85, 104, 0.4);
+    background: #2d3748;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-arrow {
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.cta-button:hover .cta-arrow {
+    transform: translateX(8px) scale(1.1);
+}
+
+/* Hero Social Links */
+.hero-social-container {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.hero-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.hero-social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 140px;
+    justify-content: center;
+}
+
+.hero-social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-social-link.instagram:hover {
+    background: linear-gradient(45deg, #833AB4, #FD1D1D, #FCB045);
+    color: white;
+    border-color: transparent;
+}
+
+.hero-social-link.facebook:hover {
+    background: #1877F2;
+    color: white;
+    border-color: transparent;
+}
+
+/* Hero Image */
+.hero-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Section titles */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2d3748;
+    letter-spacing: 0.1em;
+}
+
+/* Services Section */
+.services {
+    padding: 5rem 0;
+    background: white;
+    margin-bottom: 6rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #8F908E; /* Sophisticated gray tone */
+    padding: 3rem 2.5rem; /* Increased vertical padding */
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(143, 144, 142, 0.2); /* Updated shadow to complement gray */
+    color: white; /* Updated text color for contrast on brown background */
+    text-align: left;
+    min-height: 320px; /* Slightly increased for better proportions */
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(143, 144, 142, 0.3); /* Updated shadow to complement gray */
+}
+
+/* Removed service-icon styles as icons are no longer used */
+
+.service-card h3 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+    margin-top: 0;
+}
+
+.service-card p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.3px;
+}
+
+/* Shared call-to-action section styling */
+.services-cta {
+    text-align: center;
+    margin-top: 2rem; /* Reduced spacing to bring CTA closer to service cards */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 1rem; /* Reduced padding for tighter layout */
+}
+
+.services-cta-text {
+    font-size: 1.1rem;
+    color: #2d3748;
+    margin-bottom: 1rem; /* Further reduced spacing for closer positioning */
+    line-height: 1.7; /* Improved line height */
+    font-weight: 500; /* Slightly bolder for emphasis */
+}
+
+.services-cta-button {
+    background: #1c8a75;
+    color: white;
+    border: none;
+    padding: 1.2rem 2.5rem; /* Increased padding for better proportions */
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(28, 138, 117, 0.3);
+    text-transform: none;
+    letter-spacing: 0.8px; /* Increased letter spacing for elegance */
+}
+
+.services-cta-button:hover {
+    background: #156b5c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(28, 138, 117, 0.4);
+}
+
+/* Legacy button styles - keeping for any remaining instances */
+.service-booking-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.service-booking-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced responsive design for service cards */
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./public/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./public/favicon.png">
-    <link rel="shortcut icon" href="./public/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./public/favicon.png">
+    .service-card {
+        min-height: 300px; /* Increased for better proportions */
+        padding: 2.5rem 2rem; /* Maintained vertical padding */
+    }
     
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body class="privacy-page">
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <img src="./public/livsstadier.png" alt="Header Logo" class="nav-logo-image">
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="./index.html" class="nav-link">Forside</a>
-                </li>
-                <li class="nav-item">
-                    <a href="./index.html#services" class="nav-link">Hvad tilbyder jeg?</a>
-                </li>
-                <li class="nav-item">
-                    <a href="./index.html#about" class="nav-link">Om mig</a>
-                </li>
-            </ul>
-            <div class="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+    .services-cta-text {
+        font-size: 1rem;
+        line-height: 1.6; /* Maintained good line height on smaller screens */
+        margin-bottom: 1rem; /* Further reduced for closer positioning */
+    }
+    
+    .services-cta-button {
+        padding: 1rem 2rem; /* Maintained good proportions */
+        font-size: 1rem;
+    }
+    
+    .services-cta {
+        margin-top: 1.5rem; /* Reduced spacing on medium screens */
+        padding: 1rem 1rem;
+    }
+}
 
-    <!-- Terms of Service Content -->
-    <section class="privacy-simple-content">
-        <div class="privacy-simple-container">
-            <div class="back-to-home">
-                <a href="./index.html" class="back-button-enhanced">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                        <path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Tilbage til forside
-                </a>
-            </div>
-            
-            <h1 class="privacy-main-title">Handelsbetingelser</h1>
-            
-            <div class="privacy-intro">
-                <p>Handelsbetingelser og samarbejdsaftale for Livsstadier v. Majken Park. CVR nr. 45282120<br>
-                Mail: majkenpark@hotmail.com</p>
-            </div>
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .service-card {
+        min-height: 280px; /* Increased for better proportions */
+        padding: 2.2rem 1.8rem; /* Maintained vertical padding */
+    }
+    
+    .service-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1.8rem; /* Maintained good spacing */
+        line-height: 1.3;
+    }
+    
+    .services-cta {
+        margin-top: 1.5rem; /* Reduced spacing for closer positioning */
+        padding: 1.5rem 1rem;
+    }
+}
 
-            <h2 class="privacy-section-title">1. Generelt</h2>
-            
-            <div class="privacy-section-content">
-                <p>Disse handelsbetingelser gælder for alle køb af undervisningsforløb, 1:1 forløb, online kurser/uddannelser og relaterede tjenester, der leveres af Livsstadier (herefter "vi", "os" eller "vores") til den kunde, der køber et forløb eller en tjeneste (herefter "kunde" eller "du"). Ved at købe et forløb accepterer du disse handelsbetingelser.</p>
-            </div>
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 500px;
+    }
+    
+    .service-card {
+        min-height: 260px; /* Increased for better proportions */
+        padding: 2rem 1.5rem; /* Maintained vertical padding */
+    }
+    
+    .service-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem; /* Maintained good spacing */
+        line-height: 1.3;
+    }
+    
+    .service-card p {
+        font-size: 0.95rem;
+        line-height: 1.7; /* Maintained good line height */
+        margin-bottom: 1.2rem;
+    }
+    
+    .services-cta {
+        margin-top: 1.5rem; /* Reduced spacing for mobile */
+        padding: 1.5rem 0.5rem;
+    }
+    
+    .services-cta-text {
+        font-size: 0.95rem;
+        margin-bottom: 1rem; /* Further reduced for closer positioning */
+        line-height: 1.6;
+    }
+    
+    .services-cta-button {
+        padding: 1rem 2rem; /* Maintained good proportions */
+        font-size: 0.95rem;
+    }
+}
 
-            <h2 class="privacy-section-title">2. Køb og betaling</h2>
-            
-            <div class="privacy-section-content">
-                <p>Når du køber et undervisningsforløb eller 1:1 forløb, modtager du en bekræftelse via e-mail eller via besked. Betalingen for forløbet skal ske enten i fuld betaling eller i ratebetaling, som aftales ved købet.</p>
-            </div>
+@media (max-width: 320px) {
+    .service-card {
+        padding: 1.8rem 1.2rem; /* Maintained vertical padding */
+        min-height: 240px; /* Increased for better proportions */
+    }
+    
+    .service-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1.3rem;
+        line-height: 1.3;
+    }
+    
+    .service-card p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+    
+    .services-cta-text {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem; /* Further reduced for very small screens */
+        line-height: 1.5;
+    }
+    
+    .services-cta-button {
+        padding: 0.9rem 1.8rem; /* Maintained good proportions */
+        font-size: 0.9rem;
+    }
+    
+    .services-cta {
+        margin-top: 1.2rem; /* Minimal spacing on very small screens */
+        padding: 1rem 0.5rem;
+    }
+}
+/* Testimonials */
+.testimonials {
+    padding: 5rem 0;
+    background: white;
+}
 
-            <h2 class="privacy-section-title">3. Betalingsmuligheder</h2>
-            
-            <div class="privacy-section-content">
-                <p>Vi tilbyder flere betalingsmuligheder for at gøre det nemt og fleksibelt for dig at betale for dit undervisningsforløb. Du kan vælge mellem følgende betalingsmetoder:</p>
-                
-                <p>• Kreditkort (Visa, MasterCard, etc.)<br>
-                • Mobilpay<br>
-                • Bankoverførsel<br>
-                (Bemærk, at bankoverførsel skal gennemføres før den første undervisningstime/1:1 samtale. Du modtager betalingsinformation efter køb.)<br>
-                • Ratebetaling</p>
-                
-                <p>Ved indgåelse af en aftale om ratebetaling aftales en betalingsplan, hvor betalingen deles op i flere rater. Betalingsplanen er bindende, og du forpligter dig til at betale de aftalte beløb, også selvom du måtte vælge at afbryde undervisningen. Fortrydelsesretten bortfalder ved ratebetaling, som beskrevet i punkt 3.</p>
-                
-                <p>Alle betalinger skal ske på forhånd, og undervisningen/forløbene vil først blive igangsat, når betalingen er modtaget. Hvis du vælger ratebetaling, vil den første betaling blive opkrævet ved køb af forløbet, og de øvrige rater vil blive opkrævet i henhold til den aftalte betalingsplan.</p>
-            </div>
+/* Scrolling Banner Styles */
+.testimonial-banner-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    background: white;
+    padding: 2rem 0;
+}
 
-            <h2 class="privacy-section-title">4. Fortrydelsesret</h2>
-            
-            <div class="privacy-section-content">
-                <p>I henhold til dansk lovgivning har du som udgangspunkt 14 dages fortrydelsesret ved køb af digitale produkter og tjenester. Dog bortfalder fortrydelsesretten, hvis du som kunde har påbegyndt undervisningen.</p>
-                
-                <p>Fortrydelsesretten bortfalder i følgende tilfælde:</p>
-                
-                <p>• Når du har modtaget og gennemført 1. undervisning/samtale i dit forløb, uanset om dette er online eller i anden form.<br>
-                Ved ratebetaling, hvor du accepterer, at fortrydelsesretten bortfalder, selvom betalingerne sker i rater. Dette betyder, at du ikke kan fortryde købet og få tilbagebetaling, hvis du har påbegyndt undervisningen/samtalen.</p>
-            </div>
+.testimonial-banner {
+    display: flex;
+    gap: 3rem;
+    animation: scroll-testimonials 60s linear infinite;
+    width: fit-content;
+    padding: 0 2rem;
+}
 
-            <h2 class="privacy-section-title">5. Undervisningens varighed</h2>
-            
-            <div class="privacy-section-content">
-                <p>Vores undervisningsforløb varer som regel mellem 3 og 6 måneder, afhængig af det valgte forløb. Tjenesterne leveres online. 6 mdr.s forløbene inkluderer opfølgende samtaler i den aftalte periode.</p>
-            </div>
+/* Pause animation on hover */
+.testimonial-banner-container:hover .testimonial-banner {
+    animation-play-state: paused;
+}
 
-            <h2 class="privacy-section-title">6. Afbestilling og ændring af aftale</h2>
-            
-            <div class="privacy-section-content">
-                <p>Du kan afbestille eller ændre din aftale om en samtale inden for 48 timer før den planlagte tid. Hvis du afbestiller senere end 48 timer før, forbeholder vi os retten til at opkræve et afbestillingsgebyr.</p>
-            </div>
+.testimonial-item {
+    background: #4a5568;
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: left;
+    position: relative;
+    min-width: 500px;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(74, 85, 104, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(74, 85, 104, 0.1);
+}
 
-            <h2 class="privacy-section-title">7. Privatliv og databeskyttelse</h2>
-            
-            <div class="privacy-section-content">
-                <p>Vi behandler alle dine personlige oplysninger i overensstemmelse med gældende lovgivning om databeskyttelse. Din data vil kun blive brugt til at gennemføre dit undervisningsforløb og kommunikere med dig om relevante opdateringer.</p>
-            </div>
+.testimonial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(74, 85, 104, 0.3);
+}
 
-            <h2 class="privacy-section-title">8. Ansvar og garantier</h2>
-            
-            <div class="privacy-section-content">
-                <p>Vi garanterer, at vi leverer undervisningen/forløbene efter bedste evne, men vi påtager os ikke ansvar for resultatet af undervisningen/forløbene, da dette kan variere fra person til person. Du er selv ansvarlig for at anvende de værktøjer og metoder, der undervises i, på en måde, der passer til dine behov og ønsker ( se iøvrigt samarbejdsaftale side 3)</p>
-            </div>
+.testimonial-stars {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
 
-            <h2 class="privacy-section-title">9. Klager og tvister</h2>
-            
-            <div class="privacy-section-content">
-                <p>Hvis du har en klage, opfordrer vi dig til at kontakte os direkte for at forsøge at løse sagen. Hvis det ikke er muligt at finde en løsning, kan klagen indsendes til Forbrugerklagenævnet, som vil behandle sagen.</p>
-            </div>
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: white;
+    font-style: italic;
+    min-height: 120px;
+}
 
-            <h2 class="privacy-section-title">10. Ændringer i handelsbetingelserne</h2>
-            
-            <div class="privacy-section-content">
-                <p>Vi forbeholder os retten til at ændre disse handelsbetingelser til enhver tid, men du er garanteret de handelsbetingelser, som var gældende, da du foretog købet og modtog handelsbetingelserne.</p>
-            </div>
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: auto;
+}
 
-            <h2 class="privacy-section-title">Samarbejdsaftale i forbindelse med indgåelse af 1:1 forløb.</h2>
-            
-            <div class="privacy-section-content">
-                <p>Kære kunde.</p>
-                
-                <p>For at skabe det bedst mulige forløb for dig og sikre gensidige forventninger, vil jeg gerne dele disse rammer og principper:</p>
-            </div>
+.author-avatar {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
 
-            <h2 class="privacy-section-title">1. Hvad kan du forvente af mig</h2>
-            
-            <div class="privacy-section-content">
-                <p>– Jeg leverer det, vi har aftalt ( fx. Sessioner, støtte)<br>
-                – Jeg møder dig professionelt, nærværende og ærligt<br>
-                – Jeg støtter dig hele vejen, men jeg kan ikke gøre arbejdet for dig</p>
-            </div>
+.author-info h4 {
+    color: white;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
 
-            <h2 class="privacy-section-title">2.​Hvad jeg forventer af dig</h2>
-            
-            <div class="privacy-section-content">
-                <p>– Du møder op til aftalte tider og deltager aktivt i forløbet<br>
-                – Du er ærlig omkring dine udfordringer også når det er svært<br>
-                – Du tager ansvar for din egen proces og handlingerne imellem vores samtaler</p>
-            </div>
+.author-info span {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
 
-            <h2 class="privacy-section-title">3.​Ansvar og resultater</h2>
-            
-            <div class="privacy-section-content">
-                <p>Udbyttet af et forløb afhænger i høj grad af din egen indsats og åbenhed. Jeg garanterer støtte- ikke et specifikt resultat, da det altid er individuelt.</p>
-            </div>
+/* Scroll Animation Keyframes */
+@keyframes scroll-testimonials {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
 
-            <h2 class="privacy-section-title">4.​Tilfredshed og betaling</h2>
-            
-            <div class="privacy-section-content">
-                <p>Jeg gør mit bedste for at skabe værdi, men der gives ikke tilbagebetaling, medmindre andet er aftalt skriftligt. Hvis du overlever tvivl eller udfordringer undervejs, så kontakt mig, så tager vi en ærlig og respektfuld snak om det.</p>
-                
-                <p>Ved at starte forløbet accepterer du disse rammer.</p>
-                
-                <p>Tak fordi du vælger at investere i dig selv og vores samarbejde.</p>
-                
-                <p>Med venlig hilsen</p>
-                
-                <p>Majken Park Larsen<br>
-                Livsstadier</p>
-            </div>
-        </div>
-    </section>
+/* Scroll Indicators */
+.scroll-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding: 0 2rem;
+}
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-main">
-                <div class="footer-logo-section">
-                    <div class="footer-social">
-                        <a href="https://www.instagram.com/majkenparklarsen/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.facebook.com/majken.p.pedersen/photos" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Facebook">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-copyright">
-                <p>&copy; Livsstadier. Alle rettigheder forbeholdes.</p>
-                <div class="footer-links">
-                    <a href="./privatlivspolitik.html" class="privacy-link">Privatlivspolitik</a>
-                    <a href="./handelsbetingelser.html" class="privacy-link">Handelsbetingelser</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+.scroll-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(134, 117, 102, 0.3);
+    animation: indicator-pulse 2s ease-in-out infinite;
+}
 
-    <script src="./script.js"></script>
-</body>
-</html>
+.scroll-indicator:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.scroll-indicator:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes indicator-pulse {
+    0%, 100% {
+        background: rgba(134, 117, 102, 0.3);
+        transform: scale(1);
+    }
+    50% {
+        background: #867566;
+        transform: scale(1.2);
+    }
+}
+
+/* About Section */
+.about {
+    padding: 5rem 0;
+    background: #f8f9fa;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-photo {
+    width: 85%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-text .section-title {
+    text-align: left;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 2rem;
+}
+
+.qualifications h3 {
+    color: #2d3748;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.qualifications ul {
+    list-style: none;
+}
+
+.qualifications li {
+    padding: 0.5rem 0;
+    color: #4a5568;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.qualifications li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4a5568;
+    font-weight: bold;
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 0 3rem;
+    background: white;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 3rem;
+}
+
+.contact-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.contact .section-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #2d3748;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    min-width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: #4a5568;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-bottom: 0.5rem;
+}
+
+.contact-details h3 {
+    color: #2d3748;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.contact-details p {
+    color: #4a5568;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.social-media-section {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.social-media-section h3 {
+    color: #2d3748;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: #f8f9fa;
+    color: #4a5568;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    min-width: 140px;
+    justify-content: center;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-link.instagram:hover {
+    background: linear-gradient(45deg, #833AB4, #FD1D1D, #FCB045);
+    color: white;
+}
+
+.social-link.facebook:hover {
+    background: #1877F2;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background: #867566;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-main {
+    margin-bottom: 2rem;
+}
+
+.footer-logo-section {
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo img {
+    height: 60px;
+    width: auto;
+}
+
+.footer-logo .logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.footer-tagline {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-social-link {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-social-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.footer-copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.footer-copyright p {
+    color: #ffffff;
+}
+
+.privacy-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.privacy-link:hover {
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Simple Privacy Policy Page Styles */
+.privacy-simple-content {
+    padding: 8rem 0 4rem;
+    background: white;
+    min-height: 100vh;
+}
+
+.privacy-simple-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.back-to-home {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4a5568;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    background: transparent;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+
+.back-button:hover {
+    color: #2d3748;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Enhanced back button styling to match website design */
+.back-button-enhanced {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #4a5568;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(74, 85, 104, 0.2);
+    margin-bottom: 2rem;
+}
+
+.back-button-enhanced:hover {
+    background: #2d3748;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 85, 104, 0.3);
+}
+
+.privacy-main-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.privacy-intro {
+    margin-bottom: 3rem;
+}
+
+.privacy-intro p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.privacy-section-title {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #333;
+    letter-spacing: 0.05em;
+}
+
+.privacy-section-content {
+    margin-bottom: 3rem;
+}
+
+.privacy-section-content p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+/* Testimonial Banner Responsive Design */
+@media (max-width: 1024px) {
+    .testimonial-item {
+        min-width: 450px;
+        max-width: 450px;
+        padding: 2rem;
+    }
+    
+    .testimonial-banner {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-banner-container {
+        padding: 1.5rem 0;
+    }
+    
+    .testimonial-item {
+        min-width: 380px;
+        max-width: 380px;
+        padding: 1.5rem;
+    }
+    
+    .testimonial-text {
+        font-size: 0.95rem;
+        min-height: 100px;
+    }
+    
+    .testimonial-banner {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-item {
+        min-width: 320px;
+        max-width: 320px;
+        padding: 1.25rem;
+    }
+    
+    .testimonial-text {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        min-height: 90px;
+    }
+    
+    .author-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .author-info h4 {
+        font-size: 0.95rem;
+    }
+}
+
+.privacy-hero {
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+    color: white;
+    padding: 8rem 0 4rem;
+    text-align: center;
+}
+
+.privacy-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.privacy-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: white;
+}
+
+.privacy-content {
+    padding: 5rem 0;
+    background: white;
+}
+
+.privacy-cards {
+    display: grid;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.privacy-card {
+    background: #f8f9fa;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.privacy-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.privacy-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.privacy-icon {
+    width: 50px;
+    height: 50px;
+    background: #4a5568;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.privacy-card h2 {
+    color: #2d3748;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.privacy-card p {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.privacy-card p:last-child {
+    margin-bottom: 0;
+}
+
+.privacy-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.privacy-card li {
+    color: #4a5568;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.privacy-card li::before {
+    content: '•';
+    color: #4a5568;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.privacy-contact-cta {
+    background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.privacy-contact-cta h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.privacy-contact-cta p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+        z-index: 999;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 1rem;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+        background-color: #f8f9fa;
+        color: #2d3748;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-wrapper {
+        /* No grid needed anymore */
+    }
+
+    .slideshow-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .slide-btn {
+        position: static;
+    }
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        width: 300px;
+        height: 375px;
+    }
+
+    .footer-copyright {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .privacy-hero {
+        padding: 6rem 0 3rem;
+    }
+
+    .privacy-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .privacy-cards {
+        gap: 1.5rem;
+    }
+
+    .privacy-card {
+        padding: 2rem;
+    }
+
+    .privacy-card-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
