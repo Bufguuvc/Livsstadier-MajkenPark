@@ -158,8 +158,8 @@ function handleSubmit(event) {
 // Active Navigation Link Based on Scroll Position
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
+    
+    if (!navbar) return;
     
     // Add scrolled class to navbar
     if (window.scrollY > 50) {
@@ -167,6 +167,9 @@ window.addEventListener('scroll', function() {
     } else {
         navbar.classList.remove('scrolled');
     }
+    
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
     
     // Update active navigation link
     let current = '';
@@ -189,26 +192,69 @@ window.addEventListener('scroll', function() {
 // Intersection Observer for Animations
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: '0px 0px -100px 0px'
 };
 
-const observer = new IntersectionObserver(function(entries) {
+const animationObserver = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('animate-in');
         }
     });
 }, observerOptions);
 
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', function() {
-    const animateElements = document.querySelectorAll('.testimonial-card, .contact-card, .about-photo');
+    const animateElements = document.querySelectorAll('.testimonial-item, .service-card, .about-photo');
     
     animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+        el.classList.add('animate-element');
+        animationObserver.observe(el);
     });
+    
+    // Initialize testimonial banner if it exists
+    initializeTestimonialBanner();
+});
+
+// Enhanced testimonial banner initialization
+function initializeTestimonialBanner() {
+    const testimonialBanner = document.getElementById('testimonialBanner');
+    const bannerContainer = document.querySelector('.testimonial-banner-container');
+    
+    if (!testimonialBanner || !bannerContainer) return;
+    
+    // Ensure animation starts properly
+    testimonialBanner.style.animationPlayState = 'running';
+    
+    // Add keyboard accessibility
+    bannerContainer.setAttribute('tabindex', '0');
+    bannerContainer.setAttribute('role', 'region');
+    bannerContainer.setAttribute('aria-label', 'Customer testimonials - hover to pause scrolling');
+    
+    // Enhanced hover functionality
+    let hoverTimeout;
+    
+    bannerContainer.addEventListener('mouseenter', function() {
+        clearTimeout(hoverTimeout);
+        testimonialBanner.style.animationPlayState = 'paused';
+    });
+    
+    bannerContainer.addEventListener('mouseleave', function() {
+        hoverTimeout = setTimeout(() => {
+            testimonialBanner.style.animationPlayState = 'running';
+        }, 100);
+    });
+    
+    // Intersection Observer for performance
+    const bannerObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                testimonialBanner.style.animationPlayState = 'running';
+            } else {
+                testimonialBanner.style.animationPlayState = 'paused';
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    bannerObserver.observe(bannerContainer);
 });
